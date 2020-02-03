@@ -8,20 +8,20 @@
 
 <body>
 
-    <header>
-        <a><img src="img/device.svg" width="163" height="35" alt="DEVICE"></a>
+    <header class="main-header">
+        <a class="main-header-logo"><img src="img/device.svg" width="163" height="35" alt="Логотип DEVICE"></a>
         <ul>
-            <li><img src="img/search.svg" width="16" height="16">Поиск по сайту</li>
-            <li><img src="img/user.svg" width="13" height="12"><button type="button">Войти</button></li>
-            <li><img src="img/compare.svg" width="10" height="10"><button type="button">Сравнить</button></li>
-            <li><img src="img/cart.svg" width="12" height="12"><a href="#">Корзина</a></li>
+            <li><img src="img/search.svg" width="16" height="16" alt=""><input type="search" name="search" placeholder="Поиск по сайту"></li>
+            <li><img src="img/user.svg" width="13" height="12" alt=""><button type="button">Войти</button></li>
+            <li><img src="img/compare.svg" width="10" height="10" alt=""><button type="button">Сравнить</button></li>
+            <li><img src="img/cart.svg" width="12" height="12" alt=""><a href="#">Корзина</a></li>
         </ul>
-        <nav>
+        <nav class="main-navigation">
             <ul>
-                <li><a href="catalog.html">Каталог товаров<img src="img/plus.svg" width="16" height="16"></a></li>
-                <li><a href="delivery.html">Доставка</a></li>
-                <li><a href="guarantee.html">Гарантия</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="catalog.html">Каталог товаров<img src="img/plus.svg" width="16" height="16" alt=""></a></li>
+                <li><a href="#">Доставка</a></li>
+                <li><a href="#">Гарантия</a></li>
+                <li><a href="#">Контакты</a></li>
             </ul>
         </nav>
     </header>
@@ -33,7 +33,7 @@
             <div>
                 <img src="img/slider-1.png" width="384" height="486" alt="Самая длинная селфи-палка">
                 <p>01</p>
-                <p>Делай селфи,<br>как Бен Стиллер! </p>
+                <h2>Делай селфи,<br>как Бен Стиллер! </h2>
                 <p>Самая длинная палка для селфи доступна в нашем магазине.<br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
                 <button type="button">Подробнее</button>
                 <ul>
@@ -50,7 +50,7 @@
             <div>
                 <img src="img/slider-2.png" width="345" height="485" alt="Мотивирующий фитнес-браслет">
                 <p>02</p>
-                <p>Худеем<br>правильно!</p>
+                <h2>Худеем<br>правильно!</h2>
                 <p>Мотивирующие фитнес-браслеты помогут найти в себе силы<br> не пропускать занятия и соблюдать диету.</p>
                 <button type="button">Подробнее</button>
                 <ul>
@@ -63,7 +63,7 @@
             <div>
                 <img src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
                 <p>03</p>
-                <p>Порхает как бабочка,<br> жалит как пчела!</p>
+                <h2>Порхает как бабочка,<br> жалит как пчела!</h2>
                 <p>Этот обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную камеру.
                 </p>
                 <button type="button">Подробнее</button>
@@ -78,7 +78,7 @@
             </div>
         </section>
         <section>
-            <!--Навигация по группам товаров-->
+            <h2 class="visually-hidden">Популярные товары</h2>
             <ul>
                 <li>
                     <a><img src="img/popular-1.svg" width="97" height="55" alt="Виртуальная реальность">Виртуальная<br>реальность</a>
@@ -121,7 +121,7 @@
                 <img src="img/credit.svg" width="156" height="186" alt="Кредит"></div>
         </section>
         <section>
-            <!--Спонсоры-->
+            <h2>Спонсоры</h2>
             <ul>
                 <li><img src="img/logo-1.jpg" width="260" height="100" alt="GJI"></li>
                 <li><img src="img/logo-2.jpg" width="260" height="100" alt="Gadgets"></li>
@@ -147,21 +147,68 @@
             <img src="img/map.jpg" width="560" height="222" alt="Карта">
             <button type="button">Напишите нам</button>
         </section>
+        <section>
+            <h2 class="visually-hidden">Карта</h2>
+            <p>
+                <img src="img/map-big.jpg" width="960" height="559" alt="Офис компании по адресу г. Москва, ул. Строителей, 15
+                ">
+            </p>
+            <button class="modal-close" type="button">Закрыть</button>
+        </section>
+        <section class="writetous">
+            <h2 class="visually-hidden">Напишите нам</h2>
+            <form class="writetous-form" action="http://echo.htmlacademy.ru" method="POST">
+                <p class="writetous-item">
+                    <label for="name">Ваше имя:</label>
+                    <input id="name" type="text" placeholder="Имя Фамилия">
+                </p>
+                <p class="writetous-item">
+                    <label for="email">Ваш e-mail:</label>
+                    <input id="email" type="email" placeholder="email@example.com">
+                </p>
+                <p class="writetous-item">
+                    <label for="latter">Текст письма:</label>
+                    <textarea id="latter" placeholder="В свободной форме"></textarea>
+                </p>
+                <button type="submit" value="Отправить">Отправить</button>
+            </form>
+        </section>
+        <section class="login">
+            <h2>Личный кабинет</h2>
+            <p>Введите свой логин и пароль</p>
+            <form class="login-form" action="http://echo.htmlacademy.ru" method="POST">
+                <p>
+                    <label for="user-login">Логин</label>
+                    <input id="user-login" type="email" name="login" placeholder="email@example.com">
+                </p>
+                <p>
+                    <label for="user-password">Пароль</label>
+                    <input id="user-password" type="password" name="password" placeholder="********">
+                </p>
+                <p>
+                    <input id="remember" type="checkbox" name="remember">
+                    <label for="remember">Запомните меня</label>
+                    <a href="#">Я забыл пароль!</a>
+                </p>
+                <button type="submit">Войти</button>
+            </form>
+            <button class="modal-close" type="button">Закрыть</button>
+        </section>
 
     </main>
 
     <footer>
-        <img src="img/device.svg" width="163" height="35" alt="DEVICE">
+        <img src="img/device.svg" width="163" height="35" alt="Логотип DEVICE">
         <ul>
-            <li><img src="img/user.svg" width="13" height="12"><button type="button">Войти</button></li>
-            <li><img src="img/compare.svg" width="10" height="10"><button type="button">Сравнить</button></li>
-            <li><img src="img/cart.svg" width="12" height="12"><a href="#">Корзина</a></li>
+            <li><img src="img/user.svg" width="13" height="12" alt=""><button type="button">Войти</button></li>
+            <li><img src="img/compare.svg" width="10" height="10" alt=""><button type="button">Сравнить</button></li>
+            <li><img src="img/cart.svg" width="12" height="12" alt=""><a href="#">Корзина</a></li>
         </ul>
         <address>г. Москва, ул. Строителей, 15</address>
         <ul>
-            <li><a href="img/delivery.html">Доставка</a></li>
-            <li><a href="img/guarantee.html">Гарантия</a></li>
-            <li><a href="img/contacts.html">Контакты</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Гарантия</a></li>
+            <li><a href="#">Контакты</a></li>
         </ul>
         <span>Тел.: <a href="tel:+74954959595">+7 (495) 495-95-95</a></span>
         <ul>
