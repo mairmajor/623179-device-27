@@ -4,20 +4,23 @@
 <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
     <header class="main-header">
         <a class="main-header-logo"><img src="img/device.svg" width="163" height="35" alt="Логотип DEVICE"></a>
-        <ul>
+        <ul class="user-navigation">
             <li><img src="img/search.svg" width="16" height="16" alt=""><input type="search" name="search" placeholder="Поиск по сайту"></li>
             <li><img src="img/user.svg" width="13" height="12" alt=""><button type="button">Войти</button></li>
             <li><img src="img/compare.svg" width="10" height="10" alt=""><button type="button">Сравнить</button></li>
             <li><img src="img/cart.svg" width="12" height="12" alt=""><a href="#">Корзина</a></li>
         </ul>
         <nav class="main-navigation">
-            <ul>
+            <ul class="site-navigation">
                 <li><a href="catalog.html">Каталог товаров<img src="img/plus.svg" width="16" height="16" alt=""></a></li>
                 <li><a href="#">Доставка</a></li>
                 <li><a href="#">Гарантия</a></li>
@@ -26,13 +29,13 @@
         </nav>
         <section>
             <h2 class="visually-hidden">Популярные товары</h2>
-            <ul>
-                <li><a>Виртуальная реальность</a></li>
-                <li><a>Моноподы для селфи</a></li>
-                <li><a>Экшн-камеры</a></li>
-                <li><a>Фитнес-браслеты</a></li>
-                <li><a>Умные часы</a></li>
-                <li><a>Квадрокоптеры</a></li>
+            <ul class="popular-list">
+                <li><a href="#">Виртуальная реальность</a></li>
+                <li><a href="#">Моноподы для селфи</a></li>
+                <li><a href="#">Экшн-камеры</a></li>
+                <li><a href="#">Фитнес-браслеты</a></li>
+                <li><a href="#">Умные часы</a></li>
+                <li><a href="#">Квадрокоптеры</a></li>
             </ul>
         </section>
     </header>
@@ -41,12 +44,12 @@
 
         <section>
             <!--Раздел главных предложений -->
-            <div>
+            <div class="slider-1">
                 <img src="img/slider-1.png" width="384" height="486" alt="Самая длинная селфи-палка">
                 <p>01</p>
                 <h2>Делай селфи,<br>как Бен Стиллер! </h2>
                 <p>Самая длинная палка для селфи доступна в нашем магазине.<br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-                <button type="button">Подробнее</button>
+                <button class="button" type="button">Подробнее</button>
                 <ul>
                     <li>8,5 м</li>
                     <li>5 кг</li>
@@ -58,12 +61,12 @@
                     <li>Материал</li>
                 </ul>
             </div>
-            <div>
+            <div class="slider-2">
                 <img src="img/slider-2.png" width="345" height="485" alt="Мотивирующий фитнес-браслет">
                 <p>02</p>
                 <h2>Худеем<br>правильно!</h2>
                 <p>Мотивирующие фитнес-браслеты помогут найти в себе силы<br> не пропускать занятия и соблюдать диету.</p>
-                <button type="button">Подробнее</button>
+                <button class="button" type="button">Подробнее</button>
                 <ul>
                     <li>48 часов</li>
                 </ul>
@@ -71,13 +74,13 @@
                     <li>Без подзарядки</li>
                 </ul>
             </div>
-            <div>
+            <div class="slider-3">
                 <img src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
                 <p>03</p>
                 <h2>Порхает как бабочка,<br> жалит как пчела!</h2>
                 <p>Этот обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную камеру.
                 </p>
-                <button type="button">Подробнее</button>
+                <button class="button" type="button">Подробнее</button>
                 <ul>
                     <li>800 м</li>
                     <li>50 м</li>
@@ -114,9 +117,9 @@
         <section>
             <!--Преимущества-->
             <ul>
-                <li><button type="button">Доставка</button></li>
-                <li><button type="button">Гарантия</button></li>
-                <li><button type="button">Кредит</button></li>
+                <li><button class="button" type="button">Доставка</button></li>
+                <li><button class="button" type="button">Гарантия</button></li>
+                <li><button class="button" type="button">Кредит</button></li>
             </ul>
             <div>
                 <h2>Доставка</h2>
@@ -141,76 +144,78 @@
             </ul>
         </section>
 
-        <section>
-            <h2>О нас</h2>
-            <p>Огромный выбор гаджетов не оставит равнодушным гика,<br> который есть в каждом из нас.</p>
-            <p>Мы можем доставить ваш товар в самые отдаленные точки<br> России! DEVICE работает со многими транспортными компаниями:</p>
-            <ul>
-                <li>Деловые линии</li>
-                <li>Автотрейдинг</li>
-                <li>ЖелДорЭкспедиция</li>
-            </ul>
-            <button type="button">Подробнее о нас</button>
-        </section>
-        <section>
-            <h2>Контакты</h2>
-            <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br> проверить работоспособность покупки. Всякое бывает.</p>
-            <img src="img/map.jpg" width="560" height="222" alt="Карта">
-            <button type="button">Напишите нам</button>
-        </section>
-        <section>
-            <h2 class="visually-hidden">Карта</h2>
-            <p>
-                <img src="img/map-big.jpg" width="960" height="559" alt="Офис компании по адресу г. Москва, ул. Строителей, 15
+        <div class="index-columns">
+            <section>
+                <h2>О нас</h2>
+                <p>Огромный выбор гаджетов не оставит равнодушным гика,<br> который есть в каждом из нас.</p>
+                <p>Мы можем доставить ваш товар в самые отдаленные точки<br> России! DEVICE работает со многими транспортными компаниями:</p>
+                <ul>
+                    <li>Деловые линии</li>
+                    <li>Автотрейдинг</li>
+                    <li>ЖелДорЭкспедиция</li>
+                </ul>
+                <button class="button" type="button">Подробнее о нас</button>
+            </section>
+            <section>
+                <h2>Контакты</h2>
+                <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br> проверить работоспособность покупки. Всякое бывает.</p>
+                <img src="img/map.jpg" width="560" height="222" alt="Карта">
+                <button type="button">Напишите нам</button>
+            </section>
+            <section>
+                <h2 class="visually-hidden">Карта</h2>
+                <p>
+                    <img src="img/map-big.jpg" width="960" height="559" alt="Офис компании по адресу г. Москва, ул. Строителей, 15
                 ">
-            </p>
-            <button class="modal-close" type="button">Закрыть</button>
-        </section>
-        <section class="writetous">
+                </p>
+                <button class="modal-close" type="button">Закрыть</button>
+            </section>
+        </div>
+        <section class="modal appointment">
             <h2 class="visually-hidden">Напишите нам</h2>
-            <form class="writetous-form" action="http://echo.htmlacademy.ru" method="POST">
-                <p class="writetous-item">
-                    <label for="name">Ваше имя:</label>
+            <form class="appointment-form" action="http://echo.htmlacademy.ru" method="POST">
+                <p class="appointment-item">
+                    <label for="name">Ваше имя:</label><br>
                     <input id="name" type="text" placeholder="Имя Фамилия">
                 </p>
-                <p class="writetous-item">
-                    <label for="email">Ваш e-mail:</label>
+                <p class="appointment-item">
+                    <label for="email">Ваш e-mail:</label><br>
                     <input id="email" type="email" placeholder="email@example.com">
                 </p>
-                <p class="writetous-item">
-                    <label for="latter">Текст письма:</label>
+                <p class="appointment-item">
+                    <label for="latter">Текст письма:</label><br>
                     <textarea id="latter" placeholder="В свободной форме"></textarea>
                 </p>
-                <button type="submit" value="Отправить">Отправить</button>
+                <button class="button" type="submit" value="Отправить">Отправить</button>
             </form>
         </section>
-        <section class="login">
+        <section class="modal login">
             <h2>Личный кабинет</h2>
             <p>Введите свой логин и пароль</p>
             <form class="login-form" action="http://echo.htmlacademy.ru" method="POST">
                 <p>
-                    <label for="user-login">Логин</label>
-                    <input id="user-login" type="email" name="login" placeholder="email@example.com">
+                    <label for="user-login">Логин</label><br>
+                    <input id="user-login" type="text" name="login" placeholder="email@example.com">
                 </p>
                 <p>
-                    <label for="user-password">Пароль</label>
+                    <label for="user-password">Пароль</label><br>
                     <input id="user-password" type="password" name="password" placeholder="********">
                 </p>
                 <p>
-                    <input id="remember" type="checkbox" name="remember">
+                    <input class="login-checkbox" id="remember" type="checkbox" name="remember">
                     <label for="remember">Запомните меня</label>
-                    <a href="#">Я забыл пароль!</a>
+                    <a class="restore" href="#">я забыл пароль!</a>
                 </p>
-                <button type="submit">Войти</button>
+                <button class="button" type="submit">Войти</button>
             </form>
             <button class="modal-close" type="button">Закрыть</button>
         </section>
 
     </main>
 
-    <footer>
-        <img src="img/device.svg" width="163" height="35" alt="Логотип DEVICE">
-        <ul>
+    <footer class="main-footer">
+        <a><img class="logo-footer" src="img/device.png" width="163" height="35" alt="Логотип DEVICE"></a>
+        <ul class="user-footer">
             <li><img src="img/user.svg" width="13" height="12" alt=""><button type="button">Войти</button></li>
             <li><img src="img/compare.svg" width="10" height="10" alt=""><button type="button">Сравнить</button></li>
             <li><img src="img/cart.svg" width="12" height="12" alt=""><a href="#">Корзина</a></li>
@@ -222,7 +227,7 @@
             <li><a href="#">Контакты</a></li>
         </ul>
         <span>Тел.: <a href="tel:+74954959595">+7 (495) 495-95-95</a></span>
-        <ul>
+        <ul class="footer-social">
             <li>
                 <a href="#"><img src="img/facebook.svg" width="32" height="32" alt="facebook"></a>
             </li>
