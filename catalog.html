@@ -12,9 +12,9 @@
 <body>
 
     <header class="main-header">
-        <a class="main-header-logo"><img src="img/device.svg" width="163" height="35" alt="Логотип DEVICE"></a>
+        <a href="index.html" class="main-logo"><img src="img/device.svg" width="163" height="35" alt="Логотип DEVICE"></a>
+        <img src="img/search.svg" width="16" height="16" alt=""><input class="search" type="search" name="search" placeholder="Поиск по сайту">
         <ul class="user-navigation">
-            <li><img src="img/search.svg" width="16" height="16" alt=""><input type="search" name="search" placeholder="Поиск по сайту"></li>
             <li><img src="img/user.svg" width="13" height="12" alt=""><button type="button">Войти</button></li>
             <li><img src="img/compare.svg" width="10" height="10" alt=""><button type="button">Сравнить</button></li>
             <li><img src="img/cart.svg" width="12" height="12" alt=""><a href="#">Корзина</a></li>
@@ -29,7 +29,7 @@
         </nav>
         <section>
             <h2 class="visually-hidden">Популярные товары</h2>
-            <ul class="popular-list">
+            <ul class="item-nav">
                 <li><a href="#">Виртуальная реальность</a></li>
                 <li><a href="#">Моноподы для селфи</a></li>
                 <li><a href="#">Экшн-камеры</a></li>
@@ -50,9 +50,9 @@
             <li><img src="img/nav-arrow.svg" width="4" height="7" alt=""></li>
             <li><a>Моноподы для селфи</a></li>
         </ul>
-        <section class="filter-aside">
+        <section class="filter">
             <h2>Фильтр:</h2>
-            <form class="filter" method="GET" action="http://echo.htmlacademy.ru">
+            <form class="filter-aside" method="GET" action="http://echo.htmlacademy.ru">
                 <fieldset>
                     <legend>Стоимость</legend>
                     <input type="range" name="cost" min="0" max="10000" step="500">
@@ -77,18 +77,18 @@
                 <button class="button" type="button">Показать</button>
             </form>
 
-        </section>
-        <section>
             <h2>Сортировка:</h2>
-            <ul>
-                <li><button type="button">По цене</button></li>
-                <li><button type="button">По типу</button></li>
-                <li><button type="button">По популярности</button></li>
-            </ul>
-            <ul>
-                <li><button type="button"><img src="img/icon-up-dir.svg" width="11" height="10" alt=""></button></li>
-                <li><button type="button"><img src="img/icon-down-dir.svg" width="11" height="10" alt=""></button></li>
-            </ul>
+            <form class="filter-sort" method="GET" action="http://echo.htmlacademy.ru">
+                <ul>
+                    <li><button type="button">По цене</button></li>
+                    <li><button type="button">По типу</button></li>
+                    <li><button type="button">По популярности</button></li>
+                </ul>
+                <ul>
+                    <li><button type="button"><img src="img/icon-up-dir.svg" width="11" height="10" alt=""></button></li>
+                    <li><button type="button"><img src="img/icon-down-dir.svg" width="11" height="10" alt=""></button></li>
+                </ul>
+            </form>
         </section>
         <section class="item-list">
             <h2 class="visually-hidden">Список товаров</h2>
@@ -122,19 +122,19 @@
                     <p>4900 руб.</p>
                 </li>
             </ul>
-            <ul>
-                <li><button type="button">Назад</button></li>
-                <li><button type="button">1</button></li>
-                <li><button type="button">2</button></li>
-                <li><button type="button">3</button></li>
-                <li><button type="button">Вперед</button></li>
+            <ul class="catalog-page">
+                <li class="page-button"><button type="button">Назад</button></li>
+                <li class="page-number"><button type="button">1</button></li>
+                <li class="page-number"><button type="button">2</button></li>
+                <li class="page-number"><button type="button">3</button></li>
+                <li class="page-button"><button type="button">Вперед</button></li>
             </ul>
         </section>
 
     </main>
 
     <footer class="main-footer">
-        <a><img class="logo-footer" src="img/device.png" width="163" height="35" alt="Логотип DEVICE"></a>
+        <a><img class="main-logo" src="img/device.png" width="163" height="35" alt="Логотип DEVICE"></a>
         <ul class="user-footer">
             <li><img src="img/user.svg" width="13" height="12" alt=""><button type="button">Войти</button></li>
             <li><img src="img/compare.svg" width="10" height="10" alt=""><button type="button">Сравнить</button></li>
