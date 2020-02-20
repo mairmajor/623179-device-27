@@ -1,756 +1,924 @@
-    @font-face {
-        font-family: "Gilroy Extrabold";
-        src: local("Gilroy Extrabold"), url("../fonts/gilroyextrabold.woff2") format("woff2"), url("../fonts/gilroyextrabold.woff") format("woff");
-        font-weight: 400;
-        font-style: normal;
-    }
-    
-    @font-face {
-        font-family: "Gilroy-Light";
-        src: local("Gilroy-Light"), url("../fonts/gilroylight.woff2") format("woff2"), url("../fonts/gilroylight.woff") format("woff");
-        font-weight: 300;
-        font-style: normal;
-    }
-    
-    @font-face {
-        font-family: "OpenSans-Light";
-        src: local("OpenSans-Light"), url("../fonts/opensanslight.woff2") format("woff2"), url("../fonts/opensanslight.woff") format("woff");
-        font-weight: 300;
-        font-style: normal;
-    }
-    
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: "Open Sans", Arial, sans-serif;
-        font-size: 15px;
-        line-height: 30px;
-        color: #000000;
-        background-color: #ffffff;
-    }
-    
-    a {
-        text-decoration: none;
-        color: #000000;
-    }
-    
-    button {
-        padding: 0;
-        border: none;
-        font: inherit;
-        color: inherit;
-        background-color: transparent;
-    }
-    
-    .button {
-        font-family: "Gilroy Extrabold", Arial, sans-serif;
-        font-size: 18px;
-        font-weight: 800;
-        line-height: 24px;
-        letter-spacing: 3.6px;
-        text-align: center;
-        color: #000000;
-        text-transform: uppercase;
-        border: none;
-        height: 40px;
-        background-image: linear-gradient(to bottom, #ffffff 40%, #f0c52e 40%, #f0c52e 60%, #ffffff 60%);
-    }
-    
-    .button:hover,
-    .button:focus {
-        background: #f0c52e;
-        height: 40px;
-    }
-    
-    .button:active {
-        color: rgba(0, 0, 0, 0.3);
-    }
-    
-    .container {
-        width: 1160px;
-        margin: 0 auto;
-        padding: 0 10px;
-    }
-    
-    .main-header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-family: "Gilroy Extrabold", Arial, sans-serif;
-        font-size: 18px;
-        font-weight: 800;
-        color: #000000;
-        background-color: rgba(240, 197, 46, 0.5);
-        min-height: 197px;
-    }
-    
-    .site-navigation,
-    .user-navigation {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    
-    .site-navigation {
-        display: flex;
-        width: 560px;
-        margin-right: 61px;
-        justify-content: space-between;
-    }
-    
-    .site-navigation li:first-child {
-        margin-right: 38px;
-    }
-    
-    .site-navigation li:last-child {
-        margin-left: auto;
-    }
-    
-    .user-navigation {
-        display: flex;
-        font-family: "Open Sans", Arial, sans-serif;
-        font-size: 15px;
-        font-weight: 300;
-        color: #000000;
-        width: 560px;
-        margin-right: 61px;
-    }
-    
-    .user-navigation li:first-child {
-        align-self: flex-start;
-        margin-right: auto;
-    }
-    
-    .user-navigation li:last-child {
-        margin-left: 35px;
-    }
-    
-    .site-navigation li:hover,
-    .site-navigation li:focus,
-    .user-navigation li:hover,
-    .user-navigation li:focus {
-        opacity: 0.6;
-    }
-    
-    .site-navigation li:active,
-    .user-navigation li:active {
-        opacity: 0.3;
-    }
-    
-    .search {
-        border: none;
-        background-color: transparent;
-        color: #000000;
-        opacity: 0.3;
-        font-family: "Open Sans", Arial, sans-serif;
-        font-size: 15px;
-        font-weight: 300;
-        text-align: left;
-    }
-    
-    .search:hover {
-        opacity: 0.6;
-    }
-    
-    .search:focus {
-        border: 1px solid transparent;
-        box-shadow: 0 2px #000000;
-        outline: none;
-        opacity: 1;
-    }
-    
-    .search-space {
-        margin-left: 63px;
-    }
-    
-    .search-user {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        margin-bottom: 50px;
-    }
-    
-    .icon {
-        margin-right: 10px;
-    }
-    
-    .main-nav {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        margin-bottom: 67px;
-    }
-    
-    .item-catalog {
-        margin-left: 60px;
-    }
-    
-    .item-nav {
-        list-style: none;
-        font-family: "Open Sans", Arial, sans-serif;
-        font-size: 15px;
-        font-weight: 300;
-        text-align: left;
-        color: #000000;
-        display: none;
-    }
-    
-    .item-nav li:hover,
-    .item-nav li:focus {
-        opacity: 0.6;
-    }
-    
-    .item-nav li:active {
-        opacity: 0.3;
-    }
-    
-    .slider h2 {
-        font-family: "Gilroy Extrabold", Arial, sans-serif;
-        font-size: 47px;
-        font-weight: 800;
-        text-align: left;
-        color: #000000;
-    }
-    
-    .slider p {
-        font-family: "Open Sans", Arial, sans-serif;
-        font-size: 15px;
-        font-weight: 300;
-        text-align: left;
-        color: #464646;
-    }
-    
-    .slider-2,
-    .slider-3 {
-        display: none;
-    }
-    
-    .slider ul {
-        list-style: none;
-    }
-    
-    .slider-number {
-        font-family: "Gilroy Extrabold", Arial, sans-serif;
-        font-size: 179px;
-        font-weight: 800;
-        text-align: right;
-        color: #ffffff;
-        background-color: rgba(240, 197, 46, 0.5);
-    }
-    
-    .slider-value {
-        font-family: "Gilroy Extrabold", Arial, sans-serif;
-        font-size: 36px;
-        font-weight: 300;
-        text-align: left;
-        color: #000000;
-    }
-    
-    .slider-property {
-        font-family: "Open Sans", Arial, sans-serif;
-        font-size: 13px;
-        font-weight: 300;
-        text-align: left;
-        color: #464646;
-    }
-    
-    .index-columns {
-        display: flex;
-        justify-content: space-between;
-        padding: 0;
-        margin: 0;
-        margin-bottom: 98px;
-        font-family: "OpenSans-Light", Arial, sans-serif;
-        font-size: 15px;
-        font-weight: 300;
-        color: #464646;
-    }
-    
-    .index-columns h2 {
-        color: #000000;
-        font-family: "Gilroy Extrabold", Arial, sans-serif;
-        font-size: 47px;
-        font-weight: 800;
-    }
-    
-    .index-columns ul {
-        color: #000000;
-        font-family: "Gilroy Extrabold", Arial, sans-serif;
-        font-size: 16px;
-        font-weight: 800;
-        margin: 0;
-    }
-    
-    .black-line {
-        width: 80px;
-        height: 7px;
-        background-color: #000000;
-    }
-    
-    .contacts {
-        width: 560px;
-    }
-    
-    .columns-content {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        height: 315px;
-        padding: 0;
-        margin-bottom: 80px;
-    }
-    
-    .visually-hidden {
-        display: none;
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        border: 0;
-        padding: 0;
-        clip: rect(0 0 0 0);
-        overflow: hidden;
-    }
-    
-    .main-logo {
-        margin-left: 59px;
-        margin-right: auto;
-        margin-bottom: 37px;
-    }
-    
-    .main-logo:hover,
-    .main-logo:focus {
-        opacity: 0.6;
-    }
-    
-    .main-logo:active {
-        opacity: 0.3;
-    }
-    
-    .main-footer {
-        list-style: none;
-        color: #ffffff;
-        background-color: #464646;
-    }
-    
-    .main-footer a {
-        color: #ffffff;
-    }
-    
-    .main-footer a:hover,
-    .main-footer a:focus {
-        opacity: 0.6;
-        text-decoration: none;
-    }
-    
-    .main-footer a:active {
-        opacity: 0.3;
-    }
-    
-    .main-footer ul {
-        list-style: none;
-    }
-    
-    .user-footer {
-        display: flex;
-        margin: 0;
-        color: rgba(255, 255, 255, 0.7);
-    }
-    
-    .user-footer a {
-        opacity: 0.7;
-    }
-    
-    .user-footer li {
-        margin-left: 40px;
-    }
-    
-    .user-footer img {
-        margin-right: 10px;
-    }
-    
-    .user-footer a:hover,
-    .user-footer a:focus {
-        opacity: 1;
-        text-decoration: none;
-    }
-    
-    .user-footer a:active {
-        opacity: 0.3;
-    }
-    
-    .footer-social {
-        display: flex;
-        justify-content: space-between;
-        text-align: center;
-        list-style: none;
-        opacity: 0.3;
-        width: 141px;
-    }
-    
-    .advantages-footer {
-        display: flex;
-        font-family: "Gilroy Extrabold", Arial, sans-serif;
-        font-size: 18px;
-        font-weight: 800;
-        color: #ffffff;
-        text-transform: uppercase;
-        letter-spacing: 3.6px;
-    }
-    
-    .advantages-footer li {
-        margin-right: 38px;
-    }
-    
-    .footer .main-logo {
-        margin: 0;
-    }
-    
-    .footer {
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .footer-top {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 65px;
-    }
-    
-    .footer-middle {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-family: "Open Sans", Arial, sans-serif;
-        font-size: 15px;
-        font-weight: 300;
-    }
-    
-    .footer-bottom {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 67px;
-    }
-    
-    .yellow-line {
-        width: 80px;
-        height: 7px;
-        background-color: #ffc600;
-    }
-    
-    .modal {
-        color: #000000;
-        background-color: #ffffff;
-    }
-    
-    .modal h2 {
-        font-size: 30px;
-        line-height: 42px;
-    }
-    
-    .modal label {
-        font-family: "Gilroy Extrabold", Arial, sans-serif;
-        font-size: 18px;
-        font-weight: 800;
-        text-align: left;
-        color: #000000;
-    }
-    
-    .modal input {
-        font: "Open Sans", Arial, sans-serif;
-        color: #464646;
-        background-color: #f2f2f2;
-        width: 360px;
-        height: 50px;
-        opacity: 0.5;
-        border: none;
-        outline: none;
-    }
-    
-    .modal textarea {
-        font: "Open Sans", Arial, sans-serif;
-        color: #464646;
-        background-color: #f2f2f2;
-        width: 760px;
-        height: 156px;
-        opacity: 0.5;
-        border: none;
-        outline: none;
-    }
-    
-    .modal input:hover,
-    .modal textarea:hover {
-        background-color: #eaeaea;
-    }
-    
-    .modal input:focus,
-    .modal textarea:focus {
-        background-color: #ffffff;
-        border: solid 3px #f0c52e;
-    }
-    
-    .map {
-        display: none;
-    }
-    
-    .login {
-        display: none;
-    }
-    
-    .appointment {
-        display: none;
-    }
-    
-    .login-checkbox:hover,
-    .login-checkbox:focus {
-        color: #eaeaea;
-    }
-    
-    .restore {
-        font-family: "Gilroy Extrabold", Arial, sans-serif;
-        font-size: 18px;
-        font-weight: 800;
-        color: #000000;
-        text-decoration: underline;
-    }
-    
-    .restore:hover,
-    .restore:focus {
-        text-decoration: none;
-    }
-    
-    .fast-nav {
-        display: flex;
-        justify-content: space-between;
-        list-style: none;
-        width: 381px;
-    }
-    
-    .fast-nav a {
-        opacity: 0.3;
-        font-family: "Open Sans", Arial, sans-serif;
-        font-size: 14px;
-        font-weight: 300;
-    }
-    
-    .fast-nav a:hover,
-    .fast-nav a:focus {
-        opacity: 0.6;
-    }
-    
-    .fast-nav a:active {
-        opacity: 0.1;
-    }
-    
-    fieldset {
-        border: none;
-    }
-    
-    .filter-items {
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .filter legend {
-        font-family: "Gilroy Extrabold", Arial, sans-serif;
-        font-size: 18px;
-        font-weight: 800;
-        text-align: left;
-        color: #000000;
-    }
-    
-    .filter {
-        font-family: "Open Sans", Arial, sans-serif;
-        font-size: 14px;
-        font-weight: 300;
-        text-align: left;
-        color: #000000;
-        background-color: #ebebeb;
-        width: 268px;
-    }
-    
-    .filter ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-    
-    .filter h2 {
-        font-family: "Gilroy Extrabold", Arial, sans-serif;
-        font-size: 16px;
-        font-weight: 800;
-        text-align: left;
-        color: #000000;
-        text-transform: uppercase;
-    }
-    
-    .filter-sort li {
-        font-family: "Open Sans", Arial, sans-serif;
-        font-size: 14px;
-        color: #000000;
-        opacity: 0.3;
-    }
-    
-    .filter-sort li:hover,
-    .filter-sort li:focus {
-        opacity: 0.6;
-    }
-    
-    .filter-sort li:active {
-        opacity: 1;
-    }
-    
-    .catalog-page {
-        display: flex;
-        align-self: flex-end;
-        margin: 0;
-        width: 100%;
-    }
-    
-    .catalog-page li {
-        height: 70px;
-        font-family: "Gilroy Extrabold", Arial, sans-serif;
-        font-size: 16px;
-        font-weight: 800;
-        text-align: center;
-        color: #000000;
-        background-color: #ebebeb;
-    }
-    
-    .catalog-page .page-button {
-        opacity: 1;
-    }
-    
-    .catalog-page .page-button:hover,
-    .catalog-page .page-button:focus {
-        opacity: 1;
-        background-color: #d9d9d9;
-    }
-    
-    .catalog-page .page-button:active {
-        color: rgba(0, 0, 0, 0.3);
-    }
-    
-    .catalog-page .page-number {
-        color: rgba(0, 0, 0, 0.3);
-    }
-    
-    .catalog-page .page-number:hover,
-    .catalog-page .page-number:focus {
-        color: rgba(0, 0, 0, 0.6);
-    }
-    
-    .catalog-page .page-number:active {
-        color: rgba(0, 0, 0, 1);
-    }
-    
-    h1 {
-        font-family: "Gilroy Extrabold", Arial, sans-serif;
-        font-size: 47px;
-        font-weight: 800;
-        color: #000000;
-    }
-    
-    .item-list {
-        display: flex;
-        padding: 0;
-        margin: 0;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: 760px;
-    }
-    
-    .item-list h3 {
-        font-family: "Gilroy Extrabold", Arial, sans-serif;
-        font-size: 18px;
-        font-weight: 800;
-        text-align: left;
-        color: #000000;
-    }
-    
-    .item-list p {
-        font-family: "Gilroy-Light", Arial, sans-serif;
-        font-size: 16px;
-        font-weight: 300;
-        text-align: right;
-        color: #464646;
-    }
-    
-    .item-list ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-    
-    .popular {
-        font-family: "Gilroy Extrabold", Arial, sans-serif;
-        font-size: 18px;
-        font-weight: 800;
-        text-align: left;
-        color: #000000;
-    }
-    
-    .popular img {
-        width: 160px;
-        height: 160px;
-        background-color: rgba(240, 197, 46, 0.5);
-    }
-    
-    .popular img:hover,
-    .popular img:focus {
-        width: 160px;
-        height: 160px;
-        background-color: #f0c52e;
-    }
-    
-    .popular img:active {
-        width: 160px;
-        height: 160px;
-        opacity: 0.3;
-        background-color: #f0c52e;
-    }
-    
-    .popular ul {
-        list-style: none;
-    }
-    
-    .advantages {
-        font-family: "Open Sans", Arial, sans-serif;
-        font-size: 15px;
-        font-weight: 300;
-        text-align: left;
-        color: #464646;
-        background-color: #e5e5e5;
-    }
-    
-    .advantages h2 {
-        font-family: "Gilroy Extrabold", Arial, sans-serif;
-        font-size: 47px;
-        font-weight: 800;
-        text-align: left;
-        color: #000000;
-    }
-    
-    .advantages ul {
-        list-style: none;
-    }
-    
-    .guarantee,
-    .credit {
-        display: none;
-    }
-    
-    .advantages .button:active,
-    .advantages .button:focus {
-        width: 160px;
-        height: 40px;
-        background-color: #000000;
-        color: #f0c52e;
-        box-shadow: 118px 0 black;
-    }
-    
-    .sponsors ul {
-        list-style: none;
-    }
+@font-face {
+    font-family: "Gilroy Extrabold";
+    src: local("Gilroy Extrabold"), url("../fonts/gilroyextrabold.woff2") format("woff2"), url("../fonts/gilroyextrabold.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gilroy-Light";
+    src: local("Gilroy-Light"), url("../fonts/gilroylight.woff2") format("woff2"), url("../fonts/gilroylight.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "OpenSans-Light";
+    src: local("OpenSans-Light"), url("../fonts/opensanslight.woff2") format("woff2"), url("../fonts/opensanslight.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 30px;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+.button {
+    font-family: "Gilroy Extrabold", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 24px;
+    letter-spacing: 3.6px;
+    text-align: center;
+    color: #000000;
+    text-transform: uppercase;
+    border: none;
+    height: 40px;
+    background-image: linear-gradient(to bottom, #ffffff 40%, #f0c52e 40%, #f0c52e 60%, #ffffff 60%);
+}
+
+.button:hover,
+.button:focus {
+    background: #f0c52e;
+    height: 40px;
+}
+
+.button:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.container {
+    width: 1160px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Gilroy Extrabold", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: #000000;
+    background-color: rgba(240, 197, 46, 0.5);
+    height: 299px;
+}
+
+.site-navigation,
+.user-navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-navigation {
+    display: flex;
+    width: 560px;
+    margin-right: 61px;
+    justify-content: space-between;
+}
+
+.site-navigation li:first-child {
+    margin-right: 38px;
+}
+
+.site-navigation li:last-child {
+    margin-left: auto;
+}
+
+.user-navigation {
+    display: flex;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: #000000;
+    width: 560px;
+    margin-right: 61px;
+}
+
+.entered {
+    margin-left: 20px;
+    opacity: 0.3;
+}
+
+.user-navigation li:first-child {
+    align-self: flex-start;
+    margin-right: auto;
+}
+
+.user-navigation li:last-child {
+    margin-left: 35px;
+}
+
+.site-navigation li:hover,
+.site-navigation li:focus,
+.user-navigation li:hover,
+.user-navigation li:focus {
+    opacity: 0.6;
+}
+
+.site-navigation li:active,
+.user-navigation li:active {
+    opacity: 0.3;
+}
+
+.search {
+    border: none;
+    background-color: transparent;
+    color: #000000;
+    opacity: 0.3;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: left;
+}
+
+.search:hover {
+    opacity: 0.6;
+}
+
+.search:focus {
+    border: 1px solid transparent;
+    box-shadow: 0 2px #000000;
+    outline: none;
+    opacity: 1;
+}
+
+.search-space {
+    margin-left: 63px;
+}
+
+.search-user {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.main-nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-family: "Gilroy Extrabold", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.33;
+    letter-spacing: 3.6px;
+    text-align: left;
+    color: #000000;
+}
+
+.item-catalog {
+    margin-left: 60px;
+}
+
+.item-nav {
+    list-style: none;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: left;
+    color: #000000;
+    display: none;
+}
+
+.item-nav li:hover,
+.item-nav li:focus {
+    opacity: 0.6;
+}
+
+.item-nav li:active {
+    opacity: 0.3;
+}
+
+.white-line {
+    width: 100px;
+    height: 7px;
+    background-color: #ffffff;
+}
+
+.line-number {
+    display: flex;
+    justify-content: space-between;
+}
+
+.all-sliders {
+    height: 486px;
+    margin-bottom: 106px;
+}
+
+.slider {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+    height: 100px;
+    background-color: rgb(240, 197, 46, 0.5);
+}
+
+.slider h2 {
+    font-family: "Gilroy Extrabold", Arial, sans-serif;
+    font-size: 47px;
+    font-weight: 800;
+    text-align: left;
+    color: #000000;
+    line-height: 1.19;
+    letter-spacing: 0.47px;
+}
+
+.slider p {
+    font-family: "OpenSans-Light", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: left;
+    color: #464646;
+}
+
+.slider-2,
+.slider-3 {
+    display: none;
+}
+
+.slider ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.slider li {
+    margin-right: 80px;
+}
+
+.slider-number {
+    font-family: "Gilroy Extrabold", Arial, sans-serif;
+    font-size: 179px;
+    font-weight: 800;
+    text-align: right;
+    color: #ffffff;
+}
+
+.slider-value {
+    display: flex;
+    justify-self: flex-end;
+    font-family: "Gilroy-Light", Arial, sans-serif;
+    font-size: 36px;
+    font-weight: 300;
+    text-align: left;
+    color: #000000;
+    margin-bottom: 0;
+}
+
+.slider-property {
+    display: flex;
+    font-family: "OpenSans-Light", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    text-align: left;
+    color: #464646;
+    margin: 0;
+}
+
+.slider-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.slider-column .button {
+    margin-bottom: 76px;
+}
+
+.index-columns {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 98px;
+    font-family: "OpenSans-Light", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: #464646;
+}
+
+.index-columns h2 {
+    color: #000000;
+    font-family: "Gilroy Extrabold", Arial, sans-serif;
+    font-size: 47px;
+    font-weight: 800;
+}
+
+.index-columns ul {
+    color: #000000;
+    font-family: "Gilroy Extrabold", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.black-line {
+    width: 80px;
+    height: 7px;
+    background-color: #000000;
+}
+
+.contacts {
+    width: 560px;
+}
+
+.columns-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 315px;
+    padding: 0;
+    margin-bottom: 80px;
+}
+
+.visually-hidden {
+    display: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.main-logo {
+    margin-left: 59px;
+    margin-right: auto;
+    margin-bottom: 37px;
+}
+
+.main-logo:hover,
+.main-logo:focus {
+    opacity: 0.6;
+}
+
+.main-logo:active {
+    opacity: 0.3;
+}
+
+.main-footer {
+    list-style: none;
+    color: #ffffff;
+    background-color: #464646;
+}
+
+.main-footer a {
+    color: #ffffff;
+}
+
+.main-footer a:hover,
+.main-footer a:focus {
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+.main-footer a:active {
+    opacity: 0.3;
+}
+
+.main-footer ul {
+    list-style: none;
+}
+
+.user-footer {
+    display: flex;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.user-footer a {
+    opacity: 0.7;
+}
+
+.user-footer li {
+    margin-left: 40px;
+}
+
+.user-footer img {
+    margin-right: 10px;
+}
+
+.user-footer a:hover,
+.user-footer a:focus {
+    opacity: 1;
+    text-decoration: none;
+}
+
+.user-footer a:active {
+    opacity: 0.3;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    list-style: none;
+    opacity: 0.3;
+    width: 141px;
+}
+
+.advantages-footer {
+    display: flex;
+    font-family: "Gilroy Extrabold", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+}
+
+.advantages-footer li {
+    margin-right: 38px;
+}
+
+.footer .main-logo {
+    margin: 0;
+}
+
+.footer {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 65px;
+}
+
+.footer-middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 67px;
+}
+
+.yellow-line {
+    width: 80px;
+    height: 7px;
+    background-color: #ffc600;
+}
+
+.modal {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.modal h2 {
+    font-size: 30px;
+    line-height: 42px;
+}
+
+.modal label {
+    font-family: "Gilroy Extrabold", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    text-align: left;
+    color: #000000;
+}
+
+.modal input {
+    font: "Open Sans", Arial, sans-serif;
+    color: #464646;
+    background-color: #f2f2f2;
+    width: 360px;
+    height: 50px;
+    opacity: 0.5;
+    border: none;
+    outline: none;
+}
+
+.modal textarea {
+    font: "Open Sans", Arial, sans-serif;
+    color: #464646;
+    background-color: #f2f2f2;
+    width: 760px;
+    height: 156px;
+    opacity: 0.5;
+    border: none;
+    outline: none;
+}
+
+.modal input:hover,
+.modal textarea:hover {
+    background-color: #eaeaea;
+}
+
+.modal input:focus,
+.modal textarea:focus {
+    background-color: #ffffff;
+    border: solid 3px #f0c52e;
+}
+
+.map {
+    display: none;
+}
+
+.login {
+    display: none;
+}
+
+.appointment {
+    display: none;
+}
+
+.login-checkbox:hover,
+.login-checkbox:focus {
+    color: #eaeaea;
+}
+
+.restore {
+    font-family: "Gilroy Extrabold", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: #000000;
+    text-decoration: underline;
+}
+
+.restore:hover,
+.restore:focus {
+    text-decoration: none;
+}
+
+.fast-nav {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 381px;
+    margin-bottom: 49px;
+}
+
+.fast-nav a {
+    opacity: 0.3;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.fast-nav a:hover,
+.fast-nav a:focus {
+    opacity: 0.6;
+}
+
+.fast-nav a:active {
+    opacity: 0.1;
+}
+
+fieldset {
+    border: none;
+}
+
+.filter-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter legend {
+    font-family: "Gilroy Extrabold", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    text-align: left;
+    color: #000000;
+}
+
+.filter {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: left;
+    color: #000000;
+    background-color: #ebebeb;
+    width: 268px;
+}
+
+.filter ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    font-family: "Gilroy Extrabold", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.33;
+    letter-spacing: 3.6px;
+    text-align: left;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.sort {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ebebeb;
+    align-items: center;
+    width: 100%;
+    height: 71px;
+    margin-bottom: 69px;
+}
+
+.filter-sort {
+    display: flex;
+    justify-content: space-between;
+    width: 560px;
+}
+
+.filter-sort ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-sort ul:first-child li {
+    margin-right: 30px;
+}
+
+.filter-sort ul:nth-child(2) {
+    width: 40px;
+}
+
+.filter-sort li {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 14px;
+    color: #000000;
+    opacity: 0.3;
+}
+
+.filter-sort li:hover,
+.filter-sort li:focus {
+    opacity: 0.6;
+}
+
+.filter-sort li:active {
+    opacity: 1;
+}
+
+.catalog-page {
+    display: flex;
+    align-self: flex-end;
+    margin: 0;
+    width: 100%;
+    height: 70px;
+}
+
+.catalog-page li {
+    height: 70px;
+    font-family: "Gilroy Extrabold", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    text-align: center;
+    color: #000000;
+    background-color: #ebebeb;
+}
+
+.catalog-page .page-button {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.5;
+    letter-spacing: 3.2px;
+    text-transform: uppercase;
+    width: 136px;
+    opacity: 1;
+}
+
+.catalog-page .page-button:hover,
+.catalog-page .page-button:focus {
+    opacity: 1;
+    background-color: #d9d9d9;
+}
+
+.catalog-page .page-button:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.catalog-page .page-number {
+    justify-self: center;
+    vertical-align: middle;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.catalog-page .page-number:hover,
+.catalog-page .page-number:focus {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.catalog-page .page-number:active {
+    color: rgba(0, 0, 0, 1);
+}
+
+h1 {
+    font-family: "Gilroy Extrabold", Arial, sans-serif;
+    font-size: 47px;
+    font-weight: 800;
+    color: #000000;
+}
+
+.item-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 77px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 760px;
+}
+
+.item-caption {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.item-list h3 {
+    font-family: "Gilroy Extrabold", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    text-align: left;
+    width: 252px;
+    color: #000000;
+}
+
+.item-list a {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.item-list p {
+    font-family: "Gilroy-Light", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: right;
+    color: #464646;
+}
+
+.items-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.items-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.popular {
+    font-family: "Gilroy Extrabold", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    text-align: left;
+    color: #000000;
+    margin-bottom: 80px;
+}
+
+.popular-back {
+    width: 160px;
+    height: 160px;
+    text-align: center;
+    background-color: rgba(240, 197, 46, 0.5);
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.popular-back:hover,
+.popular-back:focus {
+    background-color: #f0c52e;
+}
+
+.popular img:active {
+    opacity: 0.3;
+    background-color: #f0c52e;
+}
+
+.popular ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.advantages {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: left;
+    color: #464646;
+    background-color: #e5e5e5;
+    margin-bottom: 90px;
+}
+
+.advantages h2 {
+    font-family: "Gilroy Extrabold", Arial, sans-serif;
+    font-size: 47px;
+    font-weight: 800;
+    text-align: left;
+    color: #000000;
+    margin: 0;
+    margin-bottom: 43px;
+}
+
+.advantages ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 278px;
+    height: 200px;
+}
+
+.advantage {
+    display: flex;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+}
+
+.advantage-description {
+    margin-right: 130px;
+}
+
+.service-line {
+    width: 7px;
+    height: 319px;
+    background-color: #000000;
+    margin-right: 116px;
+}
+
+.guarantee,
+.credit {
+    display: none;
+}
+
+.advantages .button {
+    width: 160px;
+}
+
+.advantages .button:active,
+.advantages .button:focus {
+    width: 160px;
+    height: 40px;
+    outline: none;
+    background-color: #000000;
+    color: #f0c52e;
+    box-shadow: 118px 0 black;
+}
+
+.sponsors ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 90px;
+}

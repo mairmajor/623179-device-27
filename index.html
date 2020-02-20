@@ -44,24 +44,29 @@
 
     <main class="container">
 
-        <section class="slider">
+        <section class="all-sliders">
             <!--Раздел главных предложений -->
-            <div class="slider-1">
+            <div class="slider slider-1">
                 <img src="img/slider-1.png" width="384" height="486" alt="Самая длинная селфи-палка">
-                <span class="slider-number">01</span>
-                <h2>Делай селфи,<br>как Бен Стиллер! </h2>
-                <p>Самая длинная палка для селфи доступна в нашем магазине.<br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-                <button class="button" type="button">Подробнее</button>
-                <ul class="slider-value">
-                    <li>8,5 м</li>
-                    <li>5 кг</li>
-                    <li>Карбон</li>
-                </ul>
-                <ul class="slider-property">
-                    <li>Длина палки</li>
-                    <li>Вес палки</li>
-                    <li>Материал</li>
-                </ul>
+                <div class="slider-column">
+                    <div class="line-number">
+                        <div class="white-line"></div>
+                        <span class="slider-number">01</span>
+                    </div>
+                    <h2>Делай селфи,<br>как Бен Стиллер! </h2>
+                    <p>Самая длинная палка для селфи доступна в нашем магазине.<br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+                    <button class="button" type="button">Подробнее</button>
+                    <ul class="slider-value">
+                        <li>8,5 м</li>
+                        <li>5 кг</li>
+                        <li>Карбон</li>
+                    </ul>
+                    <ul class="slider-property">
+                        <li>Длина палки</li>
+                        <li>Вес палки</li>
+                        <li>Материал</li>
+                    </ul>
+                </div>
             </div>
             <div class="slider-2">
                 <img src="img/slider-2.png" width="345" height="485" alt="Мотивирующий фитнес-браслет">
@@ -97,22 +102,28 @@
             <h2 class="visually-hidden">Популярные товары</h2>
             <ul>
                 <li>
-                    <a><img src="img/popular-1.svg" width="97" height="55" alt="Виртуальная реальность"><br>Виртуальная<br>реальность</a>
+                    <a>
+                        <div class="popular-back"><img src="img/popular-1.svg" width="97" height="55" alt=""></div><br>Виртуальная<br>реальность</a>
                 </li>
                 <li>
-                    <a><img src="img/popular-2.svg" width="86" height="117" alt="Моноподы для селфи"><br>Моноподы<br>для селфи</a>
+                    <a>
+                        <div class="popular-back"><img src="img/popular-2.svg" width="86" height="117" alt=""></div><br>Моноподы<br>для селфи</a>
                 </li>
                 <li>
-                    <a><img src="img/popular-3.svg" width="71" height="87" alt="Экшн-камеры"><br>Экшн-камеры</a>
+                    <a>
+                        <div class="popular-back"><img src="img/popular-3.svg" width="71" height="87" alt=""></div><br>Экшн-камеры</a>
                 </li>
                 <li>
-                    <a><img src="img/popular-4.svg" width="107" height="65" alt="Фитнес-браслеты"><br>Фитнес-браслеты</a>
+                    <a>
+                        <div class="popular-back"><img src="img/popular-4.svg" width="107" height="65" alt=""></div><br>Фитнес-браслеты</a>
                 </li>
                 <li>
-                    <a><img src="img/popular-5.svg" width="56" height="98" alt="Умные часы"><br>Умные часы</a>
+                    <a>
+                        <div class="popular-back"><img src="img/popular-5.svg" width="56" height="98" alt=""></div><br>Умные часы</a>
                 </li>
                 <li>
-                    <a><img src="img/popular-6.svg" width="132" height="69" alt="Квадрокоптеры"><br>Квадрокоптеры</a>
+                    <a>
+                        <div class="popular-back"><img src="img/popular-6.svg" width="132" height="69" alt=""></div><br>Квадрокоптеры</a>
                 </li>
             </ul>
         </section>
@@ -123,10 +134,14 @@
                 <li><button class="button" type="button">Гарантия</button></li>
                 <li><button class="button" type="button">Кредит</button></li>
             </ul>
-            <div class="delivery">
-                <h2>Доставка</h2>
-                <p>Мы с удовольствием доставим ваш товар прямо к вашему<br> подъезду совершенно бесплатно! Ведь мы неплохо<br> заработаем, поднимая его на ваш этаж.</p>
-                <img src="img/delivery.svg" width="136" height="164" alt="Доставка"></div>
+            <div class="service-line"></div>
+            <div class="advantage delivery">
+                <div class="advantage-description">
+                    <h2>Доставка</h2>
+                    <p>Мы с удовольствием доставим ваш товар прямо к вашему<br> подъезду совершенно бесплатно! Ведь мы неплохо<br> заработаем, поднимая его на ваш этаж.</p>
+                </div>
+                <img src="img/delivery.svg" width="136" height="164" alt="Доставка">
+            </div>
             <div class="guarantee">
                 <h2>Гарантия</h2>
                 <p>Если из-за возгорания купленного у нас товара у вас сгорит<br> дом — не переживайте, мы выдадим вам новый.<br> Товар, не дом, конечно же.</p>
