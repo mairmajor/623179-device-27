@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
+    <title>Девайс. Главная страница</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -12,25 +12,26 @@
 <body>
 
     <header class="main-header container">
-        <a class="main-logo"><img src="img/device.svg" width="163" height="35" alt="Логотип DEVICE"></a>
+        <a class="logo"><img src="img/device.svg" width="163" height="35" alt="Логотип DEVICE"></a>
         <div class="search-user">
-            <label class="search-space"><img class="icon" src="img/search.svg" width="16" height="16" alt=""><input class="search" type="search" name="search" placeholder="Поиск по сайту"></label>
+            <form class="searcher" action="http://echo.htmlacademy.ru" method="POST">
+                <label><input class="search" type="search" name="search" placeholder="Поиск по сайту">
+                <button type="submit">Поиск</button></label>
+            </form>
             <ul class="user-navigation">
-                <li><img class="icon" src="img/user.svg" width="13" height="12" alt=""><button type="button">Войти</button></li>
-                <li><img class="icon" src="img/compare.svg" width="10" height="10" alt=""><button type="button">Сравнить</button></li>
-                <li><img class="icon" src="img/cart.svg" width="12" height="12" alt=""><a href="#">Корзина</a></li>
+                <li><a>Войти</a></li>
+                <li><a>Сравнить</a></li>
+                <li><a href="#">Корзина</a></li>
             </ul>
         </div>
         <nav class="main-nav">
-            <a class="item-catalog" href="catalog.html">Каталог товаров<img src="img/plus.svg" width="16" height="16" alt=""></a>
+            <a class="item-catalog" href="catalog.html">Каталог товаров</a>
+            <div class="plus"></div>
             <ul class="site-navigation">
                 <li><a href="#">Доставка</a></li>
                 <li><a href="#">Гарантия</a></li>
                 <li><a href="#">Контакты</a></li>
             </ul>
-        </nav>
-        <section>
-            <h2 class="visually-hidden">Каталог товаров</h2>
             <ul class="item-nav">
                 <li><a href="#">Виртуальная реальность</a></li>
                 <li><a href="#">Моноподы для селфи</a></li>
@@ -39,7 +40,7 @@
                 <li><a href="#">Умные часы</a></li>
                 <li><a href="#">Квадрокоптеры</a></li>
             </ul>
-        </section>
+        </nav>
     </header>
 
     <main class="container">
@@ -54,7 +55,7 @@
                         <span class="slider-number">01</span>
                     </div>
                     <h2>Делай селфи,<br>как Бен Стиллер! </h2>
-                    <p>Самая длинная палка для селфи доступна в нашем магазине.<br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+                    <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
                     <button class="button" type="button">Подробнее</button>
                     <ul class="slider-value">
                         <li>8,5 м</li>
@@ -72,7 +73,7 @@
                 <img src="img/slider-2.png" width="345" height="485" alt="Мотивирующий фитнес-браслет">
                 <span class="slider-number">02</span>
                 <h2>Худеем<br>правильно!</h2>
-                <p>Мотивирующие фитнес-браслеты помогут найти в себе силы<br> не пропускать занятия и соблюдать диету.</p>
+                <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
                 <button class="button" type="button">Подробнее</button>
                 <ul>
                     <li>48 часов</li>
@@ -84,8 +85,8 @@
             <div class="slider-3">
                 <img src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
                 <span class="slider-number">03</span>
-                <h2>Порхает как бабочка,<br> жалит как пчела!</h2>
-                <p>Этот обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную камеру.
+                <h2>Порхает как бабочка, жалит как пчела!</h2>
+                <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
                 </p>
                 <button class="button" type="button">Подробнее</button>
                 <ul>
@@ -103,27 +104,27 @@
             <ul>
                 <li>
                     <a>
-                        <div class="popular-back"><img src="img/popular-1.svg" width="97" height="55" alt=""></div><br>Виртуальная<br>реальность</a>
+                        <div class="popular-back"><img src="img/popular-1.svg" width="97" height="55" alt=""></div>Виртуальная реальность</a>
                 </li>
                 <li>
                     <a>
-                        <div class="popular-back"><img src="img/popular-2.svg" width="86" height="117" alt=""></div><br>Моноподы<br>для селфи</a>
+                        <div class="popular-back"><img src="img/popular-2.svg" width="86" height="117" alt=""></div>Моноподы для селфи</a>
                 </li>
                 <li>
                     <a>
-                        <div class="popular-back"><img src="img/popular-3.svg" width="71" height="87" alt=""></div><br>Экшн-камеры</a>
+                        <div class="popular-back"><img src="img/popular-3.svg" width="71" height="87" alt=""></div>Экшн-камеры</a>
                 </li>
                 <li>
                     <a>
-                        <div class="popular-back"><img src="img/popular-4.svg" width="107" height="65" alt=""></div><br>Фитнес-браслеты</a>
+                        <div class="popular-back"><img src="img/popular-4.svg" width="107" height="65" alt=""></div>Фитнес-браслеты</a>
                 </li>
                 <li>
                     <a>
-                        <div class="popular-back"><img src="img/popular-5.svg" width="56" height="98" alt=""></div><br>Умные часы</a>
+                        <div class="popular-back"><img src="img/popular-5.svg" width="56" height="98" alt=""></div>Умные часы</a>
                 </li>
                 <li>
                     <a>
-                        <div class="popular-back"><img src="img/popular-6.svg" width="132" height="69" alt=""></div><br>Квадрокоптеры</a>
+                        <div class="popular-back"><img src="img/popular-6.svg" width="132" height="69" alt=""></div>Квадрокоптеры</a>
                 </li>
             </ul>
         </section>
@@ -138,17 +139,17 @@
             <div class="advantage delivery">
                 <div class="advantage-description">
                     <h2>Доставка</h2>
-                    <p>Мы с удовольствием доставим ваш товар прямо к вашему<br> подъезду совершенно бесплатно! Ведь мы неплохо<br> заработаем, поднимая его на ваш этаж.</p>
+                    <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
                 </div>
                 <img src="img/delivery.svg" width="136" height="164" alt="Доставка">
             </div>
             <div class="guarantee">
                 <h2>Гарантия</h2>
-                <p>Если из-за возгорания купленного у нас товара у вас сгорит<br> дом — не переживайте, мы выдадим вам новый.<br> Товар, не дом, конечно же.</p>
+                <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>Товар, не дом, конечно же.</p>
                 <img src="img/warranty.svg" width="171" height="194" alt="Гарантия"></div>
             <div class="credit">
                 <h2>Кредит</h2>
-                <p>Залезть в долговую яму стало проще! Кредитные<br> консультанты подберут для вас наиболее выгодные<br> условия кредита. Выгодные для нашего банка, разумеется.</p>
+                <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
                 <img src="img/credit.svg" width="156" height="186" alt="Кредит"></div>
         </section>
         <section class="sponsors">
@@ -166,8 +167,8 @@
                 <div class="black-line"></div>
                 <h2>О нас</h2>
                 <div class="columns-content">
-                    <p>Огромный выбор гаджетов не оставит равнодушным гика,<br> который есть в каждом из нас.</p>
-                    <p>Мы можем доставить ваш товар в самые отдаленные точки<br> России! DEVICE работает со многими транспортными компаниями:</p>
+                    <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+                    <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
                     <ul>
                         <li>Деловые Линии</li>
                         <li>Автотрейдинг</li>
@@ -180,10 +181,10 @@
                 <div class="black-line"></div>
                 <h2>Контакты</h2>
                 <div class="columns-content">
-                    <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br> проверить работоспособность покупки. Всякое бывает.</p>
+                    <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
                     <img src="img/map.jpg" width="560" height="222" alt="Карта">
                 </div>
-                <button type="button">Напишите нам</button>
+                <button class="button" type="button">Напишите нам</button>
             </section>
         </div>
         <section class="modal map">
@@ -198,15 +199,15 @@
             <h2 class="visually-hidden">Напишите нам</h2>
             <form class="appointment-form" action="http://echo.htmlacademy.ru" method="POST">
                 <p class="appointment-item">
-                    <label for="name">Ваше имя:</label><br>
+                    <label for="name">Ваше имя:</label>
                     <input id="name" type="text" placeholder="Имя Фамилия">
                 </p>
                 <p class="appointment-item">
-                    <label for="email">Ваш e-mail:</label><br>
+                    <label for="email">Ваш e-mail:</label>
                     <input id="email" type="email" placeholder="email@example.com">
                 </p>
                 <p class="appointment-item">
-                    <label for="latter">Текст письма:</label><br>
+                    <label for="latter">Текст письма:</label>
                     <textarea id="latter" placeholder="В свободной форме"></textarea>
                 </p>
                 <button class="button" type="submit" value="Отправить">Отправить</button>
@@ -217,11 +218,11 @@
             <p>Введите свой логин и пароль</p>
             <form class="login-form" action="http://echo.htmlacademy.ru" method="POST">
                 <p>
-                    <label for="user-login">Логин</label><br>
+                    <label for="user-login">Логин</label>
                     <input id="user-login" type="text" name="login" placeholder="email@example.com">
                 </p>
                 <p>
-                    <label for="user-password">Пароль</label><br>
+                    <label for="user-password">Пароль</label>
                     <input id="user-password" type="password" name="password" placeholder="********">
                 </p>
                 <p>
@@ -239,11 +240,11 @@
     <footer class="main-footer">
         <div class="footer container">
             <div class="footer-top">
-                <a><img class="main-logo" src="img/device.png" width="163" height="35" alt="Логотип DEVICE"></a>
+                <a><img class="logo" src="img/device.png" width="163" height="35" alt="Логотип DEVICE"></a>
                 <ul class="user-footer">
-                    <li><img src="img/user.png" width="13" height="12" alt=""><button type="button">Войти</button></li>
-                    <li><img src="img/compare.png" width="10" height="10" alt=""><button type="button">Сравнить</button></li>
-                    <li><img src="img/cart.png" width="12" height="12" alt=""><a href="#">Корзина</a></li>
+                    <li><a>Войти</a></li>
+                    <li><a>Сравнить</a></li>
+                    <li><a href="#">Корзина</a></li>
                 </ul>
             </div>
             <div class="footer-middle">

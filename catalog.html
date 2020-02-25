@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
+    <title>Девайс. Каталог</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -12,26 +12,26 @@
 <body>
 
     <header class="main-header container">
-        <a href="index.html" class="main-logo"><img src="img/device.svg" width="163" height="35" alt="Логотип DEVICE"></a>
+        <a class="logo" href="index.html"><img src="img/device.svg" width="163" height="35" alt="Логотип DEVICE"></a>
         <div class="search-user">
-            <label class="search-space"><img class="icon" src="img/search.svg" width="16" height="16" alt=""><input class="search" type="search" name="search" placeholder="Поиск по сайту"></label>
+            <form class="searcher" action="http://echo.htmlacademy.ru" method="POST">
+                <label><input class="search" type="search" name="search" placeholder="Поиск по сайту">
+                <button type="submit">Поиск</button></label>
+            </form>
             <ul class="user-navigation">
-                <li><img class="icon" src="img/user.svg" width="13" height="12" alt=""><button type="button">Валентин Петухов<span class="entered">Войти</span></button></li>
-
-                <li><img class="icon" src="img/compare.svg" width="10" height="10" alt=""><button type="button">Сравнить</button></li>
-                <li><img class="icon" src="img/cart.svg" width="12" height="12" alt=""><a href="#">Корзина</a></li>
+                <li><a>Войти</a></li>
+                <li><a>Сравнить</a></li>
+                <li><a href="#">Корзина</a></li>
             </ul>
         </div>
         <nav class="main-nav">
-            <a class="item-catalog" href="catalog.html">Каталог товаров<img src="img/plus.svg" width="16" height="16" alt=""></a>
+            <a class="item-catalog" href="catalog.html">Каталог товаров</a>
+            <div class="plus"></div>
             <ul class="site-navigation">
                 <li><a href="#">Доставка</a></li>
                 <li><a href="#">Гарантия</a></li>
                 <li><a href="#">Контакты</a></li>
             </ul>
-        </nav>
-        <section>
-            <h2 class="visually-hidden">Каталог товаров</h2>
             <ul class="item-nav">
                 <li><a href="#">Виртуальная реальность</a></li>
                 <li><a href="#">Моноподы для селфи</a></li>
@@ -40,7 +40,7 @@
                 <li><a href="#">Умные часы</a></li>
                 <li><a href="#">Квадрокоптеры</a></li>
             </ul>
-        </section>
+        </nav>
     </header>
 
     <main class="container">
@@ -113,7 +113,7 @@
                         <a href="catalog-item.html">
                             <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
                             <div class="item-caption">
-                                <h3>Профессиональная<br>селфи-палка</h3>
+                                <h3>Профессиональная селфи-палка</h3>
                                 <p>1500 руб.</p>
                             </div>
                         </a>
@@ -138,11 +138,11 @@
 
                     </li>
                     <ul class="catalog-page">
-                        <li class="page-button"><button type="button">Назад</button></li>
-                        <li class="page-number"><button type="button">1</button></li>
-                        <li class="page-number"><button type="button">2</button></li>
-                        <li class="page-number"><button type="button">3</button></li>
-                        <li class="page-button"><button type="button">Вперед</button></li>
+                        <li class="page-button"><a>Назад</a></li>
+                        <li class="page-number"><a>1</a></li>
+                        <li class="page-number"><a>2</a></li>
+                        <li class="page-number"><a>3</a></li>
+                        <li class="page-button"><a>Вперед</a></li>
                     </ul>
                 </ul>
 
@@ -154,11 +154,11 @@
     <footer class="main-footer">
         <div class="footer container">
             <div class="footer-top">
-                <a><img class="main-logo" src="img/device.png" width="163" height="35" alt="Логотип DEVICE"></a>
+                <a><img class="logo" src="img/device.png" width="163" height="35" alt="Логотип DEVICE"></a>
                 <ul class="user-footer">
-                    <li><img src="img/user.png" width="13" height="12" alt=""><button type="button">Валентин Петухов<span class="entered">Войти</span></button></li>
-                    <li><img src="img/compare.png" width="10" height="10" alt=""><button type="button">Сравнить</button></li>
-                    <li><img src="img/cart.png" width="12" height="12" alt=""><a href="#">Корзина</a></li>
+                    <li><a>Войти</a></li>
+                    <li><a>Сравнить</a></li>
+                    <li><a href="#">Корзина</a></li>
                 </ul>
             </div>
             <div class="footer-middle">
