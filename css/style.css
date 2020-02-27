@@ -881,6 +881,15 @@ a {
 
 fieldset {
     border: none;
+    padding: 0;
+    margin: 0;
+    font-family: "OpenSans-Light", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 2.86;
+    letter-spacing: 0.14px;
+    text-align: left;
+    color: #000000;
 }
 
 .filter-items {
@@ -896,19 +905,127 @@ fieldset {
     color: #000000;
 }
 
+.divider {
+    width: 201px;
+    height: 2px;
+    background-color: #000000;
+}
+
 .filter {
+    position: relative;
     font-family: "Open Sans", Arial, sans-serif;
     font-size: 14px;
     font-weight: 300;
     text-align: left;
     color: #000000;
-    background-color: #ebebeb;
     width: 268px;
+}
+
+.filter::before {
+    position: absolute;
+    content: "";
+    box-sizing: content-box;
+    width: 100%;
+    height: 71px;
+    background-color: #d9d9d9;
+    z-index: -3;
+}
+
+.filter::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -100px;
+    box-sizing: content-box;
+    width: 467px;
+    height: 1287px;
+    z-index: -3;
+    background-color: #ebebeb;
+}
+
+.filter-aside button {
+    margin-left: 35px;
+}
+
+.filter-aside button::before {
+    margin-left: -15px;
+    margin-top: 1px;
+    width: 200px;
+}
+
+.filter-color label {
+    position: relative;
+    cursor: pointer;
+}
+
+.filter-color label::before {
+    position: absolute;
+    left: -40px;
+    top: -3px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000000;
+    border-radius: 15%;
+    content: "";
+}
+
+.filter-color input[type="checkbox"] {
+    display: none;
+}
+
+.filter-color input[type="checkbox"]:checked~label::after {
+    position: absolute;
+    border: 4px solid #000000;
+    box-shadow: 0 -2px 0 0 #ebebeb inset, 0 2px 0 0 #ebebeb;
+    content: "";
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+    width: 18px;
+    height: 7px;
+    left: -35px;
+    top: 0;
+    border-radius: 0;
+    border-top-style: none;
+    border-right-style: none;
+    transform: rotate(-45deg);
+}
+
+.filter-bluetooth label {
+    position: relative;
+    cursor: pointer;
+}
+
+.filter-bluetooth label::before,
+.filter-bluetooth label::after {
+    position: absolute;
+    top: -5px;
+    left: -42px;
+    border-radius: 50%;
+    content: "";
+}
+
+.filter-bluetooth label::before {
+    width: 18px;
+    height: 18px;
+    border: solid 5px #000000;
+}
+
+.filter-bluetooth input[type="radio"] {
+    display: none;
+}
+
+.filter-bluetooth input[type="radio"]:checked~label::after {
+    top: 4px;
+    left: -33px;
+    width: 10px;
+    height: 10px;
+    background-color: #000000;
 }
 
 .filter ul {
     list-style: none;
     padding: 0;
+    padding-left: 40px;
     margin: 0;
 }
 
