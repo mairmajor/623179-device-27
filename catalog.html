@@ -19,7 +19,7 @@
                 <button type="submit">Поиск</button></label>
             </form>
             <ul class="user-navigation">
-                <li><a>Валентин Петухов<span class="entered">Войти</span></a></li>
+                <li><a>Валентин Петухов</a><span class="entered">Войти</span></li>
                 <li><a>Сравнить</a></li>
                 <li><a href="#">Корзина</a></li>
             </ul>
@@ -58,10 +58,20 @@
                 <h2>Фильтр:</h2>
                 <form class="filter-aside" method="GET" action="http://echo.htmlacademy.ru" oninput="costoutput.value=costcount.value">
                     <div class="divider"></div>
-                    <fieldset class="filter-color">
+                    <fieldset class="filter-cost">
                         <legend>Стоимость</legend>
                         <input type="range" name="costcount" min="0" max="10000" step="500">
-                        <output name="costoutput"></output>
+                        <div class="range-controls">
+                            <div class="scale">
+                                <div class="bar" style="margin-left: 0%; width: 50%"></div>
+                            </div>
+                            <div class="toggle toggle-min"></div>
+                            <div class="toggle toggle-max"></div>
+                        </div>
+                        <div class="range-price">
+                            <label>от 0<output name="min-price"></output></label>
+                            <label>до 5000<output name="maxprice"></output></label>
+                        </div>
                     </fieldset>
                     <div class="divider"></div>
                     <fieldset class="filter-color">
@@ -145,15 +155,16 @@
                         </a>
 
                     </li>
-                    <ul class="catalog-page">
-                        <li class="page-button"><a>Назад</a></li>
-                        <ul>
-                            <li class="page-number"><a>1</a></li>
-                            <li class="page-number"><a>2</a></li>
-                            <li class="page-number"><a>3</a></li>
-                        </ul>
-                        <li class="page-button"><a>Вперед</a></li>
+
+                </ul>
+                <ul class="catalog-page">
+                    <li class="page-button"><a>Назад</a></li>
+                    <ul>
+                        <li class="page-number"><a>1</a></li>
+                        <li class="page-number"><a>2</a></li>
+                        <li class="page-number"><a>3</a></li>
                     </ul>
+                    <li class="page-button"><a>Вперед</a></li>
                 </ul>
 
             </section>

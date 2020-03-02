@@ -203,6 +203,7 @@
             .user-navigation li:hover,
             .user-navigation li:focus {
                 opacity: 0.6;
+                cursor: pointer;
             }
             
             .site-navigation li:active,
@@ -970,6 +971,15 @@
                 justify-content: space-between;
             }
             
+            .filter h2 {
+                display: flex;
+                margin: 0;
+                margin-bottom: 69px;
+                justify-content: start;
+                align-items: center;
+                height: 72px;
+            }
+            
             .filter legend {
                 font-family: "Gilroy Extrabold", Arial, sans-serif;
                 font-size: 18px;
@@ -997,6 +1007,63 @@
             .filter-cost {
                 display: flex;
                 flex-direction: column;
+            }
+            
+            .filter-cost input[type="range"] {
+                display: none;
+            }
+            
+            .range-controls {
+                position: relative;
+            }
+            
+            .range-controls .scale {
+                height: 2px;
+                background: #dbdbdb;
+            }
+            
+            .range-controls .bar {
+                width: 196px;
+                height: 2px;
+                background-color: #91c92f;
+            }
+            
+            .range-controls .toggle {
+                position: absolute;
+                top: -9px;
+                left: 0px;
+                width: 4px;
+                height: 4px;
+                padding: 0;
+                border: 8px solid #ffffff;
+                background-color: #ababab;
+                box-shadow: 0 2px 1px 0 #cfcfcf;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+            
+            .range-controls .toggle:active {
+                transform: scale(1.2);
+            }
+            
+            .range-controls .toggle-max {
+                left: 130px;
+            }
+            
+            .price-controls label {
+                border: none;
+            }
+            
+            .range-price {
+                text-align: right;
+                display: flex;
+                justify-content: space-between;
+                font-family: "Gilroy-Light", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: 300;
+                color: rgba(0, 0, 0, 0.2);
+                margin-right: 110px;
+                margin-bottom: 20px;
             }
             
             .filter li:hover,
@@ -1107,6 +1174,11 @@
                 width: 10px;
                 height: 10px;
                 background-color: #000000;
+            }
+            
+            .filter-aside .button {
+                height: 40px;
+                margin-top: 50px;
             }
             
             .filter ul {
