@@ -48,9 +48,9 @@
         <section class="all-sliders">
             <!--Раздел главных предложений -->
 
-            <input type="radio" id="btn-1" name="toggle" checked>
-            <input type="radio" id="btn-2" name="toggle">
-            <input type="radio" id="btn-3" name="toggle">
+            <input class="btn-1" type="radio" id="btn-1" name="slider" checked>
+            <input class="btn-2" type="radio" id="btn-2" name="slider">
+            <input class="btn-3" type="radio" id="btn-3" name="slider">
             <div class="slider-controls">
                 <label for="btn-1"></label>
                 <label for="btn-2"></label>
@@ -110,29 +110,42 @@
         <section class="popular">
             <h2 class="visually-hidden">Популярные товары</h2>
             <ul>
+
                 <li>
                     <a>
-                        <div class="popular-back"><img src="img/popular-1.svg" width="97" height="55" alt=""></div>Виртуальная реальность</a>
+                        <div class="popular-box"><img src="img/popular-1.svg" width="97" height="55" alt=""></div>
+                        <p>Виртуальная реальность</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="catalog.html">
+                        <div class="popular-box"><img src="img/popular-2.svg" width="86" height="117" alt=""></div>
+                        <p>Моноподы для селфи</p>
+                    </a>
                 </li>
                 <li>
                     <a>
-                        <div class="popular-back"><img src="img/popular-2.svg" width="86" height="117" alt=""></div>Моноподы для селфи</a>
+                        <div class="popular-box"><img src="img/popular-3.svg" width="71" height="87" alt=""></div>
+                        <p>Экшн-камеры</p>
+                    </a>
                 </li>
                 <li>
                     <a>
-                        <div class="popular-back"><img src="img/popular-3.svg" width="71" height="87" alt=""></div>Экшн-камеры</a>
+                        <div class="popular-box"><img src="img/popular-4.svg" width="107" height="65" alt=""></div>
+                        <p>Фитнес-браслеты</p>
+                    </a>
                 </li>
                 <li>
                     <a>
-                        <div class="popular-back"><img src="img/popular-4.svg" width="107" height="65" alt=""></div>Фитнес-браслеты</a>
+                        <div class="popular-box"><img src="img/popular-5.svg" width="56" height="98" alt=""></div>
+                        <p>Умные часы</p>
+                    </a>
                 </li>
                 <li>
                     <a>
-                        <div class="popular-back"><img src="img/popular-5.svg" width="56" height="98" alt=""></div>Умные часы</a>
-                </li>
-                <li>
-                    <a>
-                        <div class="popular-back"><img src="img/popular-6.svg" width="132" height="69" alt=""></div>Квадрокоптеры</a>
+                        <div class="popular-box"><img src="img/popular-6.svg" width="132" height="69" alt=""></div>
+                        <p>Квадрокоптеры</p>
+                    </a>
                 </li>
             </ul>
         </section>
@@ -143,7 +156,6 @@
                 <li><button class="button" type="button">Гарантия</button></li>
                 <li><button class="button" type="button">Кредит</button></li>
             </ul>
-            <div class="service-line"></div>
             <div class="advantage delivery">
                 <div class="advantage-description">
                     <h2>Доставка</h2>
@@ -151,22 +163,26 @@
                 </div>
                 <img src="img/delivery.svg" width="136" height="164" alt="Доставка">
             </div>
-            <div class="guarantee">
-                <h2>Гарантия</h2>
-                <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>Товар, не дом, конечно же.</p>
+            <div class="advantage guarantee">
+                <div class="advantage-description">
+                    <h2>Гарантия</h2>
+                    <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>Товар, не дом, конечно же.</p>
+                </div>
                 <img src="img/warranty.svg" width="171" height="194" alt="Гарантия"></div>
-            <div class="credit">
-                <h2>Кредит</h2>
-                <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+            <div class="advantage credit">
+                <div class="advantage-description">
+                    <h2>Кредит</h2>
+                    <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+                </div>
                 <img src="img/credit.svg" width="156" height="186" alt="Кредит"></div>
         </section>
         <section class="sponsors">
             <h2 class="visually-hidden">Спонсоры</h2>
             <ul>
-                <li><img src="img/logo-1.jpg" width="260" height="100" alt="GJI"></li>
-                <li><img src="img/logo-2.jpg" width="260" height="100" alt="Gadgets"></li>
-                <li><img src="img/logo-3.jpg" width="260" height="100" alt="GoPro"></li>
-                <li><img src="img/logo-4.jpg" width="260" height="100" alt="Vive"></li>
+                <li><img src="img/logo-1.jpg" width="260" height="100" alt="GJI"><img class="color-spons" src="img/logo-1-hover.jpg" width="260" height="100" alt=""></li>
+                <li><img src="img/logo-2.jpg" width="260" height="100" alt="Gadgets"><img class="color-spons" src="img/logo-2-hover.jpg" width="260" height="100" alt=""></li>
+                <li><img src="img/logo-3.jpg" width="260" height="100" alt="GoPro"><img class="color-spons" src="img/logo-3-hover.jpg" width="260" height="100" alt=""></li>
+                <li><img src="img/logo-4.jpg" width="260" height="100" alt="Vive"><img class="color-spons" src="img/logo-4-hover.jpg" width="260" height="100" alt=""></li>
             </ul>
         </section>
 
@@ -220,27 +236,6 @@
                 </p>
                 <button class="button" type="submit" value="Отправить">Отправить</button>
             </form>
-        </section>
-        <section class="modal login">
-            <h2>Личный кабинет</h2>
-            <p>Введите свой логин и пароль</p>
-            <form class="login-form" action="http://echo.htmlacademy.ru" method="POST">
-                <p>
-                    <label for="user-login">Логин</label>
-                    <input id="user-login" type="text" name="login" placeholder="email@example.com">
-                </p>
-                <p>
-                    <label for="user-password">Пароль</label>
-                    <input id="user-password" type="password" name="password" placeholder="********">
-                </p>
-                <p>
-                    <input class="login-checkbox" id="remember" type="checkbox" name="remember">
-                    <label for="remember">Запомните меня</label>
-                    <a class="restore" href="#">я забыл пароль!</a>
-                </p>
-                <button class="button" type="submit">Войти</button>
-            </form>
-            <button class="modal-close" type="button">Закрыть</button>
         </section>
 
     </main>

@@ -19,7 +19,7 @@
                 <button type="submit">Поиск</button></label>
             </form>
             <ul class="user-navigation">
-                <li><a>Войти</a></li>
+                <li><a>Валентин Петухов<span class="entered">Войти</span></a></li>
                 <li><a>Сравнить</a></li>
                 <li><a href="#">Корзина</a></li>
             </ul>
@@ -56,12 +56,12 @@
         <div class="filter-items">
             <section class="filter">
                 <h2>Фильтр:</h2>
-                <form class="filter-aside" method="GET" action="http://echo.htmlacademy.ru">
+                <form class="filter-aside" method="GET" action="http://echo.htmlacademy.ru" oninput="costoutput.value=costcount.value">
                     <div class="divider"></div>
-                    <fieldset>
-
+                    <fieldset class="filter-color">
                         <legend>Стоимость</legend>
-                        <input type="range" name="cost" min="0" max="10000" step="500">
+                        <input type="range" name="costcount" min="0" max="10000" step="500">
+                        <output name="costoutput"></output>
                     </fieldset>
                     <div class="divider"></div>
                     <fieldset class="filter-color">
@@ -92,13 +92,17 @@
                     <h2>Сортировка:</h2>
                     <form class="filter-sort" method="GET" action="http://echo.htmlacademy.ru">
                         <ul>
-                            <li><button type="button">По цене</button></li>
-                            <li><button type="button">По типу</button></li>
-                            <li><button type="button">По популярности</button></li>
+                            <li><a>По цене</a></li>
+                            <li><a>По типу</a></li>
+                            <li><a>По популярности</a></li>
                         </ul>
                         <ul>
-                            <li><button type="button"><img src="img/icon-up-dir.svg" width="11" height="10" alt=""></button></li>
-                            <li><button type="button"><img src="img/icon-down-dir.svg" width="11" height="10" alt=""></button></li>
+                            <li>
+                                <a><img src="img/icon-up-dir.svg" width="11" height="10" alt=""></a>
+                            </li>
+                            <li>
+                                <a><img src="img/icon-down-dir.svg" width="11" height="10" alt=""></a>
+                            </li>
                         </ul>
                     </form>
                 </div>
@@ -143,9 +147,11 @@
                     </li>
                     <ul class="catalog-page">
                         <li class="page-button"><a>Назад</a></li>
-                        <li class="page-number"><a>1</a></li>
-                        <li class="page-number"><a>2</a></li>
-                        <li class="page-number"><a>3</a></li>
+                        <ul>
+                            <li class="page-number"><a>1</a></li>
+                            <li class="page-number"><a>2</a></li>
+                            <li class="page-number"><a>3</a></li>
+                        </ul>
                         <li class="page-button"><a>Вперед</a></li>
                     </ul>
                 </ul>
@@ -160,7 +166,7 @@
             <div class="footer-top">
                 <a><img class="logo" src="img/device.png" width="163" height="35" alt="Логотип DEVICE"></a>
                 <ul class="user-footer">
-                    <li><a>Войти</a></li>
+                    <li><a>Валентин Петухов<span class="entered">Войти</span></a></li>
                     <li><a>Сравнить</a></li>
                     <li><a href="#">Корзина</a></li>
                 </ul>
