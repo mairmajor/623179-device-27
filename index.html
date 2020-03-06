@@ -16,7 +16,8 @@
         <div class="search-user">
             <form class="searcher" action="http://echo.htmlacademy.ru" method="POST">
                 <label><input class="search" type="search" name="search" placeholder="Поиск по сайту">
-                <button type="submit">Поиск</button></label>
+                <button type="submit">Поиск</button>
+            <div class="search-underline"></div></label>
             </form>
             <ul class="user-navigation">
                 <li><a>Войти</a></li>
@@ -33,19 +34,25 @@
                 <li><a href="#">Контакты</a></li>
             </ul>
             <ul class="item-nav">
-                <li><a href="#">Виртуальная реальность</a></li>
-                <li><a href="#">Моноподы для селфи</a></li>
-                <li><a href="#">Экшн-камеры</a></li>
-                <li><a href="#">Фитнес-браслеты</a></li>
-                <li><a href="#">Умные часы</a></li>
-                <li><a href="#">Квадрокоптеры</a></li>
+                <ul>
+                    <li><a href="#">Виртуальная реальность</a></li>
+                    <li><a href="#">Моноподы для селфи</a></li>
+                    <li><a href="#">Экшн-камеры</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Фитнес-браслеты</a></li>
+                    <li><a href="#">Умные часы</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Квадрокоптеры</a></li>
+                </ul>
             </ul>
         </nav>
     </header>
 
-    <main class="container">
+    <main>
 
-        <section class="all-sliders">
+        <section class="all-sliders container">
             <!--Раздел главных предложений -->
 
             <input class="btn-1" type="radio" id="btn-1" name="slider" checked>
@@ -107,7 +114,7 @@
                 </div>
             </div>
         </section>
-        <section class="popular">
+        <section class="popular container">
             <h2 class="visually-hidden">Популярные товары</h2>
             <ul>
 
@@ -149,34 +156,43 @@
                 </li>
             </ul>
         </section>
-        <section class="advantages">
-            <!--Преимущества-->
-            <ul>
-                <li><button class="button" type="button">Доставка</button></li>
-                <li><button class="button" type="button">Гарантия</button></li>
-                <li><button class="button" type="button">Кредит</button></li>
-            </ul>
-            <div class="advantage delivery">
-                <div class="advantage-description">
-                    <h2>Доставка</h2>
-                    <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+        <section class="advantages-box">
+            <div class="advantages-back"></div>
+            <div class="advantages container">
+
+                <input class="btn-d" type="radio" id="btn-d" name="advantage" checked>
+                <input class="btn-g" type="radio" id="btn-g" name="advantage">
+                <input class="btn-c" type="radio" id="btn-c" name="advantage">
+
+                <ul class="advantages-buttons">
+                    <li><label for="btn-d"><span class="button">Доставка</span></label></li>
+                    <li><label for="btn-g"><span class="button">Гарантия</span></label></li>
+                    <li><label for="btn-c"><span class="button">Кредит</span></label></li>
+                </ul>
+                <div class="delivery">
+                    <div class="advantage-description">
+                        <h2>Доставка</h2>
+                        <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+                    </div>
+                    <img src="img/delivery.svg" width="136" height="164" alt="Доставка">
                 </div>
-                <img src="img/delivery.svg" width="136" height="164" alt="Доставка">
+                <div class="guarantee">
+                    <div class="advantage-description">
+                        <h2>Гарантия</h2>
+                        <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>Товар, не дом, конечно же.</p>
+                    </div>
+                    <img src="img/warranty.svg" width="171" height="194" alt="Гарантия">
+                </div>
+                <div class="credit">
+                    <div class="advantage-description">
+                        <h2>Кредит</h2>
+                        <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+                    </div>
+                    <img src="img/credit.svg" width="156" height="186" alt="Кредит">
+                </div>
             </div>
-            <div class="advantage guarantee">
-                <div class="advantage-description">
-                    <h2>Гарантия</h2>
-                    <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>Товар, не дом, конечно же.</p>
-                </div>
-                <img src="img/warranty.svg" width="171" height="194" alt="Гарантия"></div>
-            <div class="advantage credit">
-                <div class="advantage-description">
-                    <h2>Кредит</h2>
-                    <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
-                </div>
-                <img src="img/credit.svg" width="156" height="186" alt="Кредит"></div>
         </section>
-        <section class="sponsors">
+        <section class="sponsors container">
             <h2 class="visually-hidden">Спонсоры</h2>
             <ul>
                 <li><img src="img/logo-1.jpg" width="260" height="100" alt="GJI"><img class="color-spons" src="img/logo-1-hover.jpg" width="260" height="100" alt=""></li>
@@ -185,58 +201,33 @@
                 <li><img src="img/logo-4.jpg" width="260" height="100" alt="Vive"><img class="color-spons" src="img/logo-4-hover.jpg" width="260" height="100" alt=""></li>
             </ul>
         </section>
-
-        <div class="index-columns">
-            <section class="about">
-                <div class="black-line"></div>
-                <h2>О нас</h2>
-                <div class="columns-content">
-                    <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-                    <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-                    <ul>
-                        <li>Деловые Линии</li>
-                        <li>Автотрейдинг</li>
-                        <li>ЖелДорЭкспедиция</li>
-                    </ul>
-                </div>
-                <button class="button" type="button">Подробнее о нас</button>
-            </section>
-            <section class="contacts">
-                <div class="black-line"></div>
-                <h2>Контакты</h2>
-                <div class="columns-content">
-                    <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-                    <img src="img/map.jpg" width="560" height="222" alt="Карта">
-                </div>
-                <button class="button" type="button">Напишите нам</button>
-            </section>
+        <div class="container">
+            <div class="index-columns">
+                <section class="about">
+                    <div class="black-line"></div>
+                    <h2>О нас</h2>
+                    <div class="columns-content">
+                        <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+                        <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+                        <ul>
+                            <li>Деловые Линии</li>
+                            <li>Автотрейдинг</li>
+                            <li>ЖелДорЭкспедиция</li>
+                        </ul>
+                    </div>
+                    <button class="button" type="button">Подробнее о нас</button>
+                </section>
+                <section class="contacts">
+                    <div class="black-line"></div>
+                    <h2>Контакты</h2>
+                    <div class="columns-content">
+                        <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+                        <img src="img/map.jpg" width="560" height="222" alt="Карта">
+                    </div>
+                    <button class="button" type="button">Напишите нам</button>
+                </section>
+            </div>
         </div>
-        <section class="modal map">
-            <h2 class="visually-hidden">Карта</h2>
-            <p>
-                <img src="img/map-big.jpg" width="960" height="559" alt="Офис компании по адресу г. Москва, ул. Строителей, 15
-            ">
-            </p>
-            <button class="modal-close" type="button">Закрыть</button>
-        </section>
-        <section class="modal appointment">
-            <h2 class="visually-hidden">Напишите нам</h2>
-            <form class="appointment-form" action="http://echo.htmlacademy.ru" method="POST">
-                <p class="appointment-item">
-                    <label for="name">Ваше имя:</label>
-                    <input id="name" type="text" placeholder="Имя Фамилия">
-                </p>
-                <p class="appointment-item">
-                    <label for="email">Ваш e-mail:</label>
-                    <input id="email" type="email" placeholder="email@example.com">
-                </p>
-                <p class="appointment-item">
-                    <label for="latter">Текст письма:</label>
-                    <textarea id="latter" placeholder="В свободной форме"></textarea>
-                </p>
-                <button class="button" type="submit" value="Отправить">Отправить</button>
-            </form>
-        </section>
 
     </main>
 
@@ -278,6 +269,33 @@
             </div>
         </div>
     </footer>
+    <section class="modal appointment">
+        <h2 class="visually-hidden">Напишите нам</h2>
+        <form class="appointment-form" action="http://echo.htmlacademy.ru" method="POST">
+            <p class="appointment-item">
+                <label for="name">Ваше имя:</label>
+                <input id="name" type="text" placeholder="Имя Фамилия">
+            </p>
+            <p class="appointment-item">
+                <label for="email">Ваш e-mail:</label>
+                <input id="email" type="email" placeholder="email@example.com">
+            </p>
+            <p class="appointment-item">
+                <label for="letter">Текст письма:</label>
+                <textarea id="letter" placeholder="В свободной форме"></textarea>
+            </p>
+            <button class="button" type="submit" value="Отправить">Отправить</button>
+            <div class="modal-close"></div>
+        </form>
+    </section>
+    <section class="modal map">
+        <h2 class="visually-hidden">Карта</h2>
+
+        <img src="img/map-big.jpg" width="960" height="559" alt="Офис компании по адресу г. Москва, ул. Строителей, 15
+        ">
+
+        <div class="modal-close"></div>
+    </section>
 
 </body>
 
