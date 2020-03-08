@@ -15,9 +15,9 @@
         <a class="logo"><img src="img/device.svg" width="163" height="35" alt="Логотип DEVICE"></a>
         <div class="search-user">
             <form class="searcher" action="http://echo.htmlacademy.ru" method="POST">
-                <label><input class="search" type="search" name="search" placeholder="Поиск по сайту">
-                <button type="submit">Поиск</button>
-            <div class="search-underline"></div></label>
+                <input class="search" type="search" name="search" placeholder="Поиск по сайту">
+                <button>Поиск</button>
+                <div class="search-underline"></div>
             </form>
             <ul class="user-navigation">
                 <li><a>Войти</a></li>
@@ -34,18 +34,22 @@
                 <li><a href="#">Контакты</a></li>
             </ul>
             <ul class="item-nav">
-                <ul>
-                    <li><a href="#">Виртуальная реальность</a></li>
-                    <li><a href="#">Моноподы для селфи</a></li>
-                    <li><a href="#">Экшн-камеры</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#">Фитнес-браслеты</a></li>
-                    <li><a href="#">Умные часы</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#">Квадрокоптеры</a></li>
-                </ul>
+                <li>
+                    <ul>
+                        <li><a href="#">Виртуальная реальность</a></li>
+                        <li><a href="#">Моноподы для селфи</a></li>
+                        <li><a href="#">Экшн-камеры</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li><a href="#">Фитнес-браслеты</a></li>
+                        <li><a href="#">Умные часы</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">Квадрокоптеры</a></li>
+
             </ul>
         </nav>
     </header>
@@ -119,7 +123,7 @@
             <ul>
 
                 <li>
-                    <a>
+                    <a href="catalog.html">
                         <div class="popular-box"><img src="img/popular-1.svg" width="97" height="55" alt=""></div>
                         <p>Виртуальная реальность</p>
                     </a>
@@ -127,29 +131,29 @@
                 <li>
                     <a href="catalog.html">
                         <div class="popular-box"><img src="img/popular-2.svg" width="86" height="117" alt=""></div>
-                        <p>Моноподы для селфи</p>
+                        <p>Моноподы<br>для селфи</p>
                     </a>
                 </li>
                 <li>
-                    <a>
+                    <a href="catalog.html">
                         <div class="popular-box"><img src="img/popular-3.svg" width="71" height="87" alt=""></div>
                         <p>Экшн-камеры</p>
                     </a>
                 </li>
                 <li>
-                    <a>
+                    <a href="catalog.html">
                         <div class="popular-box"><img src="img/popular-4.svg" width="107" height="65" alt=""></div>
                         <p>Фитнес-браслеты</p>
                     </a>
                 </li>
                 <li>
-                    <a>
+                    <a href="catalog.html">
                         <div class="popular-box"><img src="img/popular-5.svg" width="56" height="98" alt=""></div>
                         <p>Умные часы</p>
                     </a>
                 </li>
                 <li>
-                    <a>
+                    <a href="catalog.html">
                         <div class="popular-box"><img src="img/popular-6.svg" width="132" height="69" alt=""></div>
                         <p>Квадрокоптеры</p>
                     </a>
@@ -222,9 +226,9 @@
                     <h2>Контакты</h2>
                     <div class="columns-content">
                         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-                        <img src="img/map.jpg" width="560" height="222" alt="Карта">
+                        <img class="map-link" src="img/map.jpg" width="560" height="222" alt="Карта">
                     </div>
-                    <button class="button" type="button">Напишите нам</button>
+                    <a href="writeus.html" class="button appointment-link">Напишите нам</a>
                 </section>
             </div>
         </div>
@@ -274,29 +278,31 @@
         <form class="appointment-form" action="http://echo.htmlacademy.ru" method="POST">
             <p class="appointment-item">
                 <label for="name">Ваше имя:</label>
-                <input id="name" type="text" placeholder="Имя Фамилия">
+                <input id="name" type="text" name="name" placeholder="Имя Фамилия" required>
             </p>
             <p class="appointment-item">
                 <label for="email">Ваш e-mail:</label>
-                <input id="email" type="email" placeholder="email@example.com">
+                <input id="email" type="email" name="email" placeholder="email@example.com" required>
             </p>
             <p class="appointment-item">
                 <label for="letter">Текст письма:</label>
                 <textarea id="letter" placeholder="В свободной форме"></textarea>
             </p>
             <button class="button" type="submit" value="Отправить">Отправить</button>
-            <div class="modal-close"></div>
+            <div class="modal-close"><span class="visually-hidden">Закрыть</span></div>
         </form>
     </section>
     <section class="modal map">
         <h2 class="visually-hidden">Карта</h2>
-
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.071501472948!2d37.52769753715638!3d55.687744636208215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1583611762628!5m2!1sru!2sru"
+            width="960" height="559" allowfullscreen></iframe>
         <img src="img/map-big.jpg" width="960" height="559" alt="Офис компании по адресу г. Москва, ул. Строителей, 15
         ">
 
-        <div class="modal-close"></div>
+        <div class="modal-close"><span class="visually-hidden">Закрыть</span></div>
     </section>
-
+    <script src="js/miniscript.js">
+    </script>
 </body>
 
 </html>
