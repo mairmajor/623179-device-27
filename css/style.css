@@ -81,7 +81,7 @@
                 text-transform: uppercase;
                 border: none;
                 height: 40px;
-                background-color: inherit;
+                background-color: transparent;
                 cursor: pointer;
             }
             
@@ -421,6 +421,7 @@
             .item-nav {
                 position: absolute;
                 top: 20px;
+                left: 0;
                 display: none;
                 list-style: none;
                 font-family: "OpenSans-Light", Arial, sans-serif;
@@ -1659,6 +1660,10 @@
             .item-list li:hover .button,
             .item-list li:hover .item-compare {
                 display: block;
+            }
+            
+            .item-list li:hover .item-layer {
+                top: 0;
             }
             
             .item-layer {
