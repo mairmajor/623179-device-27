@@ -481,6 +481,7 @@
                 right: 70px;
                 margin-bottom: 10px;
                 text-align: center;
+                z-index: 1;
             }
             
             .slider-controls label {
@@ -1394,7 +1395,7 @@
                 display: none;
             }
             
-            .filter-color input[type="checkbox"]:checked~label::after {
+            input[type="checkbox"]:checked~label::after {
                 position: absolute;
                 border: 4px solid #000000;
                 box-shadow: 0 -2px 0 0 #ebebeb inset, 0 2px 0 0 #ebebeb;
@@ -1444,7 +1445,7 @@
                 display: none;
             }
             
-            .filter-bluetooth input[type="radio"]:checked~label::after {
+            input[type="radio"]:checked~label::after {
                 top: 4px;
                 left: -33px;
                 width: 10px;
@@ -1517,7 +1518,7 @@
                 align-items: center;
             }
             
-            .filter-sort ul:first-child li {
+            .sort-option li {
                 margin-right: 30px;
             }
             
@@ -1641,13 +1642,13 @@
                 margin-bottom: 15px;
             }
             
-            .item-list li:hover .item-layer,
-            .item-list li:hover .button,
-            .item-list li:hover .item-compare {
+            .item:hover .item-layer,
+            .item:hover .button,
+            .item:hover .item-compare {
                 display: block;
             }
             
-            .item-list li:hover .item-layer {
+            .item:hover .item-layer {
                 top: 0;
             }
             
@@ -1775,7 +1776,7 @@
                 color: #000000;
             }
             
-            .popular {
+            .populars {
                 font-family: "Gilroy Extrabold", Arial, sans-serif;
                 font-size: 18px;
                 font-weight: 800;
@@ -1786,7 +1787,7 @@
                 margin-bottom: 128px;
             }
             
-            .popular ul {
+            .populars ul {
                 display: flex;
                 justify-content: space-between;
                 list-style: none;
@@ -1794,7 +1795,7 @@
                 margin: 0;
             }
             
-            .popular a {
+            .populars a {
                 width: 160px;
                 min-height: 240px;
                 display: flex;
@@ -1814,19 +1815,19 @@
                 margin-bottom: 15px;
             }
             
-            .popular li:nth-child(2) img {
+            .popular:nth-child(2) img {
                 align-self: flex-end;
             }
             
-            .popular li:active a {
+            .popular:active a {
                 color: rgba(0, 0, 0, 0.3);
             }
             
-            .popular li:active img {
+            .popular:active img {
                 opacity: 0.3;
             }
             
-            .popular a::before {
+            .populars a::before {
                 position: absolute;
                 top: 0px;
                 content: '';
@@ -1838,15 +1839,16 @@
                 z-index: -1;
             }
             
-            .popular li:hover a::before,
-            .popular li:focus a::before,
-            .popular li:active a::before {
+            .popular:hover a::before,
+            .popular:focus a::before,
+            .popular:active a::before {
                 background-color: #f0c52e;
             }
             
             .advantages-box {
                 position: relative;
-                margin-bottom: 220px;
+                margin-bottom: 170px;
+                min-height: 250px;
             }
             
             .advantages-back {
@@ -1862,12 +1864,13 @@
                 position: relative;
                 display: flex;
                 justify-content: space-between;
-                align-items: center;
+                align-items: flex-start;
                 font-family: "Open Sans", Arial, sans-serif;
                 font-size: 15px;
                 font-weight: 300;
                 text-align: left;
                 color: #464646;
+                min-height: 250px;
             }
             
             .advantages::after {
@@ -1895,6 +1898,7 @@
                 width: 760px;
                 padding: 0;
                 margin: 0;
+                margin-top: 5px;
             }
             
             .advantages input[type="radio"] {
@@ -1938,7 +1942,7 @@
                 padding: 0;
                 margin: 0;
                 width: 278px;
-                height: 200px;
+                min-height: 200px;
             }
             
             .advantage-description {
@@ -1954,6 +1958,10 @@
                 margin-top: 9px;
             }
             
+            .advantages .button::before {
+                margin-top: 1px;
+            }
+            
             .advantages img {
                 margin-top: 20px;
             }
@@ -1967,7 +1975,7 @@
                 margin-bottom: 90px;
             }
             
-            .sponsors li {
+            .sponsor {
                 position: relative;
                 cursor: pointer;
             }
@@ -1978,6 +1986,6 @@
                 top: 0;
             }
             
-            .sponsors li:hover .color-spons {
+            .sponsor:hover .color-spons {
                 display: block;
             }
