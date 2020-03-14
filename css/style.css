@@ -209,19 +209,17 @@
                 margin-right: 20px;
             }
             
-            .site-navigation li:hover,
-            .site-navigation li:focus,
-            .user-navigation li:hover a,
-            .user-navigation li:focus a,
-            .user-navigation li:hover::before,
-            .user-navigation li:focus::before {
+            .nav:hover a,
+            .nav:focus a,
+            .nav:hover::before,
+            .nav:focus::before {
                 opacity: 0.6;
                 cursor: pointer;
             }
             
-            .site-navigation li:active,
-            .user-navigation li:active a,
-            .user-navigation li:active::before {
+            .nav:active,
+            .nav:active a,
+            .nav:active::before {
                 opacity: 0.3;
             }
             
@@ -823,19 +821,6 @@
                 height: 12px;
                 margin-right: 12px;
                 vertical-align: middle;
-            }
-            
-            .user-footer li:hover a,
-            .user-footer li:focus a,
-            .user-footer li:hover::before,
-            .user-footer li:focus::before {
-                opacity: 0.6;
-                cursor: pointer;
-            }
-            
-            .user-footer li:active a,
-            .user-footer li:active::before {
-                opacity: 0.3;
             }
             
             .footer-social {
