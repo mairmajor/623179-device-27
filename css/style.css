@@ -519,7 +519,7 @@
                 margin-top: 0px;
                 box-sizing: content-box;
                 min-height: 486px;
-                background-image: linear-gradient(to bottom, rgb(240, 197, 46, 0.5) 22.5%, transparent 22.5%);
+                background-image: linear-gradient(to bottom, rgba(240, 197, 46, 0.5) 22.5%, transparent 22.5%);
             }
             
             .slider-1::before,
