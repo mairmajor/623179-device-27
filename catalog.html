@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <title>Девайс. Каталог</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap&subset=cyrillic" rel="stylesheet">
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+
+    <link href="css/mininormalize.css" rel="stylesheet">
+    <link href="css/ministyle.css" rel="stylesheet">
 </head>
 
 <body>
@@ -74,7 +74,7 @@
                     <form class="filter-aside" method="GET" action="http://echo.htmlacademy.ru" oninput="costoutput.value=costcount.value">
                         <h2>Фильтр:</h2>
                         <div class="divider"></div>
-                        <fieldset class="filter-cost">
+                        <fieldset class="fieldset filter-cost">
                             <legend>Стоимость</legend>
                             <input type="range" name="costcount" min="0" max="10000" step="500">
                             <div class="range-controls">
@@ -90,7 +90,7 @@
                             </div>
                         </fieldset>
                         <div class="divider"></div>
-                        <fieldset class="filter-color">
+                        <fieldset class="fieldset filter-color">
                             <legend>Цвет</legend>
                             <ul>
                                 <li><input type="checkbox" name="black" id="black" checked><label for="black">Черный</label></li>
@@ -101,7 +101,7 @@
                             </ul>
                         </fieldset>
                         <div class="divider"></div>
-                        <fieldset class="filter-bluetooth">
+                        <fieldset class="fieldset filter-bluetooth">
                             <legend>Bluetooth</legend>
                             <ul>
                                 <li><input type="radio" name="bluetooth" value="true" id="bluetooth-yes" checked><label for="bluetooth-yes">Есть</label></li>
